@@ -1,4 +1,4 @@
-export let jobExperiences = [
+export const jobExperiences = [
     {
         job_title: "Graphic Designer",
         tenure: 5,

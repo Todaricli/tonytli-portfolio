@@ -1,12 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
 
-	let mounted = false;
+	export let mounted = false;
+    export let time = 0;
 
 	onMount(() => {
 		const timer = setTimeout(() => {
-			mounted = true;
-		}, 3000);
+			mounted;
+		}, time);
 		console.log('Window has finished loading');
         return () => clearTimeout(timer)
 	});
