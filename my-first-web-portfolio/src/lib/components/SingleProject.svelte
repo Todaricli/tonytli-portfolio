@@ -7,9 +7,9 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div on:click={() => toggleShowBack()} class="flip-box w-full h-96 box-content">
-	<div class="flip-box-inner w-full h-full flex flex-col justify-center items-center relative" class:fliped={showCardBack}>
-		<div class="flip-box-front w-full h-full rounded-3xl absolute bg-black">
+<div on:click={() => toggleShowBack()} class="flip-box w-full h-96 box-content rounded-3xl">
+	<div class="flip-box-inner w-full h-full flex flex-col rounded-3xl justify-center items-center relative bg-black shadow-[0px_5px_5px_5px_rgb(255,0,0)]" class:fliped={showCardBack}>
+		<div class="flip-box-front w-full h-full rounded-3xl absolute">
 			<div class="image-cont w-full p-2.5 rounded-3xl">
 				<img class="w-full h-auto p-2.5 max-h-full" src={project.image} alt={project.name}/>
 			</div>
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 
-		<div class="flip-box-back w-full h-full rounded-3xl absolute bg-black flex flex-col justify-center items-center text-white">
+		<div class="flip-box-back w-full h-full rounded-3xl absolute flex flex-col justify-center items-center text-white">
 			<h2>{project.name}</h2>
 			<p class="text-xs">{@html project.desc}</p>
 		</div>
@@ -28,7 +28,7 @@
 <style>
 	.flip-box {
 		perspective: 500px;
-        transition: transform 500ms;
+        transition: transform 300ms;
 	}
 
     .flip-box:hover {

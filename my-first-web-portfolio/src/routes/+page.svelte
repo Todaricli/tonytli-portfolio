@@ -1,72 +1,85 @@
 <script>
 	import { onMount } from 'svelte';
+	import { globalDataLoadingDuration } from '../lib/store/store';
+	import Loader from '../lib/components/Loader.svelte';
+	import { mounted } from '../lib/store/store';
 
-	let mounted = false;
+	const loadingMessage = 'Home.';
+	$mounted = false;
 
 	onMount(() => {
 		const timer = setTimeout(() => {
-			mounted = true;
-		}, 3000);
-		console.log('Window has finished loading');
-        return () => clearTimeout(timer)
+			$mounted = true;
+		}, $globalDataLoadingDuration);
+		return () => clearTimeout(timer);
 	});
 </script>
 
-<div
-	class="loader-wrapper w-full h-full absolute top-0 left-0 bg-black flex flex-col justify-center items-center"
-	class:hide={mounted}
->
-	<span class="loader inline-block w-52 h-52 absolute border-8 text-white"
-		><span class="inner-loader align-top inline-block w-full text-white"></span></span
-	>
-	<span class="loader inline-block w-36 h-36 absolute border-4 text-white"
-		><span class="inner-loader align-top inline-block w-full text-white"></span></span
-	>
-	<span class="text-white text-center">Hold on!</span>
+<Loader message={loadingMessage}></Loader>
+
+<div class="flex flex-col justify-start" class:hide={!$mounted}>
+	<div class="w-full p-28 flex flex-col justify-center items-start gap-5 pb-48">
+			<div class="flex flex-col justify-start items-start gap-5">
+				<h3 class="w-80 text-lg text-slate-950">
+					Welcome to John Smith's World of Web Wizardry! I'm John, a skilled web developer
+					passionate about creating stunning online experiences. Explore my portfolio and discover
+					how I can bring your digital dreams to life.
+				</h3>
+				<button class="bg-slate-200 rounded-xl px-5 py-3 hover:bg-slate-300 animate-pulse"
+					><a href="/projects"><span class="font-mono">PROJECTS</span></a></button
+				>
+			</div>
+	</div>
+
+	<div class="text-container flex flex-col items-center justify-end pb-24 overflow-hidden">
+		<div class="whitespace-nowrap text-inner-wrapper overflow-hidden">
+			<div class="text-slides">
+				<h1 class="text-9xl text-white font-bold">John Smith - Prospective Web Developer</h1>
+			</div>
+			<div class="text-slides">
+				<h1 class="text-9xl text-white font-bold">John Smith - Prospective Web Developer</h1>
+			</div>
+			<div class="text-slides">
+				<h1 class="text-9xl text-white font-bold">John Smith - Prospective Web Developer</h1>
+			</div>
+		</div>
+	</div>
 </div>
 
 <style>
-	.loader {
-		animation: loader 3s infinite ease;
+	.text-container {
+		height: auto;
 	}
-	.inner-loader {
-		animation: loader-inner 3s infinite ease-in;
+
+	.text-inner-wrapper:hover .text-slides {
+		animation-play-state: paused;
+	}
+	.text-slides {
+		display: inline-block;
+		animation: slide 18s infinite linear;
+		padding-right: 5em;
+	}
+
+	button {
+		transition: transform 2s;
+	}
+
+	button:hover {
+		transform: translateX(20px);
+		animation-play-state: paused;
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
 	}
 	.hide {
-		visibility: hidden;
+		display: none;
 	}
-	@keyframes loader {
-		0% {
-			transform: rotate(0deg);
+
+	@keyframes slide {
+		from {
+			transform: translateX(0%);
 		}
-		25% {
-			transform: rotate(180deg);
-		}
-		50% {
-			transform: rotate(180deg);
-		}
-		75% {
-			transform: rotate(360deg);
-		}
-		100% {
-			transform: rotate(360deg);
-		}
-	}
-	@keyframes loader-inner {
-		0% {
-			height: 0%;
-		}
-		25% {
-			height: 0%;
-		}
-		50% {
-			height: 100%;
-		}
-		75% {
-			height: 100%;
-		}
-		100% {
-			height: 0%;
+		to {
+			transform: translateX(-100%);
 		}
 	}
 </style>

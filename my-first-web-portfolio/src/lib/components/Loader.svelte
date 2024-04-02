@@ -1,21 +1,12 @@
 <script>
-	import { onMount } from 'svelte';
+	import { mounted } from "../store/store";
+	export let message;
 
-	export let mounted = false;
-    export let time = 0;
-
-	onMount(() => {
-		const timer = setTimeout(() => {
-			mounted;
-		}, time);
-		console.log('Window has finished loading');
-        return () => clearTimeout(timer)
-	});
 </script>
 
 <div
 	class="loader-wrapper w-full h-full absolute top-0 left-0 bg-black flex flex-col justify-center items-center"
-	class:hide={mounted}
+	class:hide={$mounted}
 >
 	<span class="loader inline-block w-52 h-52 absolute border-8 text-white"
 		><span class="inner-loader align-top inline-block w-full text-white"></span></span
@@ -23,10 +14,13 @@
 	<span class="loader inline-block w-36 h-36 absolute border-4 text-white"
 		><span class="inner-loader align-top inline-block w-full text-white"></span></span
 	>
-	<span class="text-white text-center">Hold on!</span>
+	<span class="text-white text-center">{message}</span>
 </div>
 
 <style>
+	.loader-wrapper {
+		z-index: 9999;
+	}
 	.loader {
 		animation: loader 3s infinite ease;
 	}
@@ -34,7 +28,7 @@
 		animation: loader-inner 3s infinite ease-in;
 	}
 	.hide {
-		visibility: hidden;
+		display: none;
 	}
 	@keyframes loader {
 		0% {
