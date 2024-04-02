@@ -1,6 +1,6 @@
 import { writable} from "svelte/store";
 
-export const globalDataLoadingDuration = writable(Math.floor(Math.random()* (2500 - 1500 +1) + 1500))
+export const globalDataLoadingDuration = writable(Math.floor(Math.random()* (2000 - 1200 +1) + 1500))
 
 export let mounted = writable(false)
 

@@ -45,4 +45,11 @@
 		min-height: 100vh;
 		height: 100%;
 	}
+
+	:global(html) {
+		/**There is some bugs occurs simply followed the setup guide on tailwind css*/
+		/* background-color: theme(colors.stone.950); */
+		width: 100%;
+		min-height: 100vh;
+	}
 </style>
