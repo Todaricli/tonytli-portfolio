@@ -10,6 +10,7 @@
 	onMount(() => {
 		const timer = setTimeout(() => {
 			$mounted = true;
+			console.log($mounted + "in project")
 		}, $globalDataLoadingDuration);
 		return () => clearTimeout(timer);
 	});
@@ -34,13 +35,13 @@
 	<div class="text-container flex flex-col items-center justify-end pb-24 overflow-hidden">
 		<div class="whitespace-nowrap text-inner-wrapper overflow-hidden">
 			<div class="text-slides">
-				<h1 class="text-9xl text-white font-bold">John Smith - Prospective Web Developer</h1>
+				<h1 class="text-9xl text-white font-bold">JOHN SMITH - PROSPECTIVE WEB DEVELOPER</h1>
 			</div>
 			<div class="text-slides">
-				<h1 class="text-9xl text-white font-bold">John Smith - Prospective Web Developer</h1>
+				<h1 class="text-9xl text-white font-bold">JOHN SMITH - PROSPECTIVE WEB DEVELOPER</h1>
 			</div>
 			<div class="text-slides">
-				<h1 class="text-9xl text-white font-bold">John Smith - Prospective Web Developer</h1>
+				<h1 class="text-9xl text-white font-bold">JOHN SMITH - PROSPECTIVE WEB DEVELOPER</h1>
 			</div>
 		</div>
 	</div>

@@ -10,6 +10,7 @@
 	onMount(() => {
 		const timer = setTimeout(() => {
 			$mounted = true;
+			console.log($mounted + "in contact")
 		}, $globalDataLoadingDuration);
 		return () => clearTimeout(timer);
 	});
@@ -39,15 +40,15 @@
 				<!-- add hidden Honeypot input to prevent spams -->
 				<input type="hidden" name="_gotcha" style="display:none !important" />
 
-				<button class="bg-gray-600 font-mono p-2 rounded-lg" type="submit">Lets chat!</button>
+				<button class="bg-gray-600 font-mono p-2 rounded-lg text-lg" type="submit">Lets chat!</button>
 			</div>
 		</form>
 	</div>
-		<div class="flex flex-col pt-14 tablet:pt-0 justify-center items-start gap-4">
+		<div class="flex flex-col pt-14 tablet:pt-0 justify-center items-start gap-2">
             <h1 class="w-56 pb-2">Other Contacts:</h1>
-            <span class="hover:animate-bounce"><a href="mailto:leetony347@yahoo.com">leetony347@yahoo.com</a></span>
-			<span class="hover:animate-bounce"><a href="https://github.com/Todaricli">Github</a></span>
-			<span class="hover:animate-bounce"><a href="https://www.linkedin.com/in/tuocheng-li-b86b59231/">Linkedin</a></span>
+            <span class="hover:animate-bounce"><a class="p-2 m-1" href="mailto:leetony347@yahoo.com">leetony347@yahoo.com</a></span>
+			<span class="hover:animate-bounce"><a class="p-2 m-1" href="https://github.com/Todaricli">Github</a></span>
+			<span class="hover:animate-bounce"><a class="p-2 m-1" href="https://www.linkedin.com/in/tuocheng-li-b86b59231/">Linkedin</a></span>
 		</div>
 </div>
 
@@ -56,7 +57,7 @@
 		display: none;
 	}
 
-	input {
+	input, textarea {
 		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	}
 
@@ -81,6 +82,10 @@
     button {
         transition: transform 2s;
     }
+
+	::placeholder {
+		opacity: 0.25;
+	}
 
     @keyframes button-effect {
         0% {

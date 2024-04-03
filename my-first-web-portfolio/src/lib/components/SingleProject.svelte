@@ -8,7 +8,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div on:click={() => toggleShowBack()} class="flip-box w-full h-96 box-content rounded-3xl">
-	<div class="flip-box-inner w-full h-full flex flex-col rounded-3xl justify-center items-center relative bg-black shadow-[0px_5px_5px_5px_rgb(255,0,0)]" class:fliped={showCardBack}>
+	<div class="flip-box-inner w-full h-full flex flex-col rounded-3xl justify-center items-center relative bg-black shadow-[0px_5px_5px_5px_rgb(44,50,56)]" class:fliped={showCardBack}>
 		<div class="flip-box-front w-full h-full rounded-3xl absolute">
 			<div class="image-cont w-full p-2.5 rounded-3xl">
 				<img class="w-full h-auto p-2.5 max-h-full" src={project.image} alt={project.name}/>
