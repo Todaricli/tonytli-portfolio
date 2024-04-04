@@ -19,7 +19,7 @@
 <Loader message={loadingMessage}></Loader>
 
 <div class="flex flex-col justify-start" class:hide={!$mounted}>
-	<div class="w-full p-28 flex flex-col justify-center items-start gap-5 pb-48">
+	<div class="w-full p-28 flex flex-col justify-center items-start gap-5 pb-20">
 			<div class="flex flex-col justify-start items-start gap-5">
 				<h3 class="w-80 text-lg text-slate-950">
 					Welcome to John Smith's World of Web Wizardry! I'm John, a skilled web developer
@@ -35,13 +35,13 @@
 	<div class="text-container flex flex-col items-center justify-end pb-24 overflow-hidden">
 		<div class="whitespace-nowrap text-inner-wrapper overflow-hidden">
 			<div class="text-slides">
-				<h1 class="text-9xl text-white font-bold">JOHN SMITH - PROSPECTIVE WEB DEVELOPER</h1>
+				<h1 class="text-[188px] text-white">John Smith - Prospective Web Developer</h1>
 			</div>
 			<div class="text-slides">
-				<h1 class="text-9xl text-white font-bold">JOHN SMITH - PROSPECTIVE WEB DEVELOPER</h1>
+				<h1 class="text-[188px] text-white">John Smith - Prospective Web Developer</h1>
 			</div>
 			<div class="text-slides">
-				<h1 class="text-9xl text-white font-bold">JOHN SMITH - PROSPECTIVE WEB DEVELOPER</h1>
+				<h1 class="text-[188px] text-white">John Smith - Prospective Web Developer</h1>
 			</div>
 		</div>
 	</div>
@@ -58,7 +58,8 @@
 	.text-slides {
 		display: inline-block;
 		animation: slide 18s infinite linear;
-		padding-right: 5em;
+		padding-right: 10em;
+		font-family: DMSans, Arial, Helvetica, sans-serif;
 	}
 
 	button {

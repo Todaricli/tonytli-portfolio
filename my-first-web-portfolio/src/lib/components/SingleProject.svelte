@@ -11,7 +11,7 @@
 	<div class="flip-box-inner w-full h-full flex flex-col rounded-3xl justify-center items-center relative bg-black shadow-[0px_5px_5px_5px_rgb(44,50,56)]" class:fliped={showCardBack}>
 		<div class="flip-box-front w-full h-full rounded-3xl absolute">
 			<div class="image-cont w-full p-2.5 rounded-3xl">
-				<img class="w-full h-auto p-2.5 max-h-full" src={project.image} alt={project.name}/>
+				<img class="w-full h-auto p-2.5 max-h-full opacity-50" src={project.image} alt={project.name}/>
 			</div>
 			<div>
 				<h2 class="text-center text-white">{project.name}</h2>
@@ -60,6 +60,9 @@
 	.image-cont {
 		height: 80%;
         box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+	}
+	img:hover {
+		animation: image-effect 1s forwards linear
 	}
 
 	/* * {

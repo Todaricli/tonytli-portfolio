@@ -16,25 +16,22 @@
 	});
 </script>
 
-<div class="w-full h-full">
-	<div class="flex flex-row justify-between text-white p-2">
-		<h1 class="invisible">Tony T Li</h1>
-		<nav class="w-1/2 flex flex-row justify-evenly">
-			<a href="/">Home</a>
-			<a href="/experiences">Experiences</a>
-			<a href="/projects">Projects</a>
-			<a href="/about">About</a>
-			<a href="/contact">Contact</a>
-		</nav>
-	</div>
-
-	<slot />
-
-	<footer class="opacity-50 bottom-0 relative">
-		<h1 class="text-center text-1xl font-bold underline text-white">Welcome to HOME</h1>
-		<p class="text-center text-white">Coded by Tony Tuocheng Li</p>
-	</footer>
+<div class="flex flex-row justify-between text-white p-2">
+	<h1 class="invisible">Tony T Li</h1>
+	<nav class="w-1/2 flex flex-row justify-evenly">
+		<a href="/">Home</a>
+		<a href="/experiences">Experiences</a>
+		<a href="/projects">Projects</a>
+		<a href="/about">About</a>
+		<a href="/contact">Contact</a>
+	</nav>
 </div>
+
+<slot />
+<footer class="opacity-50 sticky top-full mb-5">
+	<h1 class="text-center text-1xl font-bold underline text-white">Welcome to HOME</h1>
+	<p class="text-center text-white">Coded by Tony Tuocheng Li</p>
+</footer>
 
 <style lang="postcss">
 	:global(body) {

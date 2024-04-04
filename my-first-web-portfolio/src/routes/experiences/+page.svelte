@@ -20,11 +20,11 @@
 </script>
 
 <Loader message={loadingMessage}></Loader>
-<div class:hide={!$mounted} class="flex flex-col justify-center items-center py-4 px-16 gap-5">
-	<div class="flex flex-col items-start w-full mb-6 pl-6 mt-14">
-		<h1 class="title text-white text-7xl tablet:scale-125 tablet:translate-x-20 laptop:scale-150 laptop:translate-x-40 pb-4 pr-8 opacity-70">MY EXPERIENCE</h1>
-		<div class="w-96 tablet:ml-12 mt-6">
-			<p>With a rich history spanning Apple, Google, SpaceX, and Tencent, I bring a wealth of experience as a developer, analyst, and marketing director. From pioneering tech solutions to crafting strategic marketing campaigns, my journey reflects a commitment to innovation, collaboration, and driving measurable impact in dynamic, global environments.</p>
+<div class:hide={!$mounted} class="experience-main-container w-full h-full flex flex-col justify-center items-center py-4 px-16 gap-5">
+	<div class="flex flex-col items-start w-full mb-24 pl-6 pt-28">
+		<h1 class="title text-white text-6xl tablet:scale-[1.4] tablet:translate-x-20 laptop:scale-[2.0] laptop:translate-x-72 pb-2 tablet:pr-8 opacity-70">MY EXPERIENCE</h1>
+		<div class="w-[400px] text-lg pt-2 tablet:pt-4 tablet:ml-16 laptop:ml-36 mt-6">
+			<p class="experience-main-desc">With a rich history spanning Apple, Google, SpaceX, and Tencent, I bring a wealth of experience as a developer, analyst, and marketing director. From pioneering tech solutions to crafting strategic marketing campaigns, my journey reflects a commitment to innovation, collaboration, and driving measurable impact in dynamic, global environments.</p>
 		</div>
 	</div>
 
@@ -45,9 +45,9 @@
 						class="flex flex-col justify-start items-start pl-2 pr-14 pd-5 text-slate-300 gap-4 font-serif text-xl"
 					>
 						<p class="pt-2 text-sm">Tenure: {singleExperience.tenure} Years</p>
-						<div class="p-2 pl-0 hover:animate-bounce">
-							<button
-								><a class="text-center" href="/experiences/{singleExperience.slug}"
+						<div class="experience-button-div p-2 pl-0">
+							<button class="hover:translate-x-10 hover:text-stone-600"
+								><a class="w-full h-full text-center" href="/experiences/{singleExperience.slug}"
 									>{singleExperience.title} &#8594</a
 								></button
 							>
@@ -74,18 +74,14 @@
 	.experience-flex-container {
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 	}
-
-	@keyframes image-effect {
-		0% {
-
-		}
-		50% {
-			opacity: 75%;
-		}
-		100% {
-			opacity: 100%;
-		}
+	.experience-button-div button {
+		transition: transform 1s;
+	}
+	.experience-main-desc {
+		font-family: DMSans, Arial, Helvetica, sans-serif;
 	}
 
-
+	.experience-main-container {
+		animation: page-effect 500ms forwards linear
+	}
 </style>

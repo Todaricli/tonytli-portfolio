@@ -4,10 +4,91 @@
 
 #container {
     width: 100%;
-    height: 100%;
+    height: inherit;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 @font-face {
     font-family: page-title;
-    src: url(/fonts/RubikScribble-Regular.ttf)
+    src: url(/fonts/RubikScribble-Regular.ttf);
+}
+
+@font-face {
+    font-family: teko;
+    src: url(/fonts/Teko.ttf);
+}
+
+@font-face {
+    font-family: Bebas;
+    src: url(/fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url(/fonts/DMSans.ttf);
+}
+
+@keyframes image-effect {
+    0% {
+
+    }
+    50% {
+        opacity: 75%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes dropdown-items-effect {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes page-effect {
+    0% {
+        transform: translateY(30%);
+    }
+    50% {
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes experience-effect {
+    0% {
+        opacity: 0%;
+    } 
+    15% {
+        opacity: 15%;
+    }
+    30% {
+        opacity: 30%;
+    }
+    50% {
+        opacity: 45%;
+    }
+    65% {
+        opacity: 60%;
+    }
+    85% {
+        opacity: 75%;
+    }
+    100% {
+        opacity: 90%;
+    }
 }
