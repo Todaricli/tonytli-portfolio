@@ -61,11 +61,7 @@
 		height: 80%;
         box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
 	}
-	img:hover {
+	.flip-box:hover img {
 		animation: image-effect 1s forwards linear
 	}
-
-	/* * {
-		border: solid red 1px;
-	} */
 </style>
