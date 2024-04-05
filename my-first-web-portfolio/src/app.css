@@ -32,6 +32,11 @@ html {
     src: url(/fonts/DMSans.ttf);
 }
 
+@font-face {
+    font-family: Tourney;
+    src: url(/fonts/Tourney.ttf);
+}
+
 @keyframes image-effect {
     0% {
 
@@ -58,13 +63,16 @@ html {
 
 @keyframes page-effect {
     0% {
-        transform: translateY(30%);
+        opacity: 35%;
+    }
+    25% {
+        opacity: 55%;
     }
     50% {
-        transform: translateY(15%);
+        opacity: 75%;
     }
-    100% {
-        transform: translateY(0%);
+    75% {
+        opacity: 100%;
     }
 }
 

@@ -3,13 +3,18 @@
 	export let data;
 	import { isExperienceMounted } from '../../../lib/store/store';
 
-	console.log($isExperienceMounted);
-
+	let ScreenWidth;
 	let clickToDrop = false;
 	let path;
 
-	const openIcon = "fa-bars-staggered"
-	const closeIcon = "fa-angle-up";
+	const openIcon = 'fa-bars-staggered';
+	const closeIcon = 'fa-angle-up';
+
+	function expandExperienceNavlinks() {
+		if(ScreenWidth > 740) {
+			clickToDrop = false;
+		}
+	}
 
 	function changeState() {
 		$isExperienceMounted = false;
@@ -17,20 +22,29 @@
 		const timer = setTimeout(() => {
 			$isExperienceMounted = true;
 			path = window.location.pathname;
-			isCurrentPage = true;
 		}, 200);
 	}
 
 	onMount(() => {
 		path = window.location.pathname;
 	});
+
+	onMount(() => {		
+		window.addEventListener('resize', expandExperienceNavlinks);
+		
+		return () => {
+			window.removeEventListener('resize', expandExperienceNavlinks);
+		}
+	});
 </script>
+
+<svelte:window bind:innerWidth={ScreenWidth} />
 
 <div class="experience-main-container w-full h-full flex flex-col justify-center items-center p-8">
 	<div
 		class="pt-12 flex flex-col justify-center items-center tablet:items-start tablet:w-5/6 tablet:grid tablet:grid-cols-6 gap-4"
 	>
-		<main class="col-span-4 experience-main-container">
+		<main class="col-span-4 experience-main-content-container" class:shade-background={clickToDrop}>
 			<slot />
 		</main>
 		<aside class="hidden tablet:flex col-span-2 w-5/6 tablet:w-auto">
@@ -54,9 +68,10 @@
 		</aside>
 		<div class="top-10 right-5 fixed">
 			<button
-				on:click={() => (clickToDrop = !clickToDrop)}
-				class="text-white text-1xl rounded-3xl tablet:hidden z-20 animate-pulse"
-				><i class="w-full fa-solid {clickToDrop ? closeIcon : openIcon} text-white text-3xl"></i></button
+				on:click={() => clickToDrop = !clickToDrop}
+				class="text-white text-1xl rounded-3xl tablet:hidden z-20 hover:animate-pulse"
+				><i class="w-full fa-solid {clickToDrop ? closeIcon : openIcon} text-white text-3xl"
+				></i></button
 			>
 		</div>
 		<div
@@ -91,6 +106,10 @@
 	.experience-main-container {
 		animation: experience-effect 1s forwards linear;
 	}
+
+	.experience-main-content-container {
+		transition: opacity 1000ms;
+	}
 	.experience-link {
 		transition: transform 1000ms;
 		font-family: DMSans, Arial, Helvetica, sans-serif;
@@ -108,5 +127,8 @@
 		.dropdown {
 			display: block;
 		}
+	}
+	.shade-background {
+		opacity: 25%;
 	}
 </style>

@@ -21,11 +21,11 @@
 
 <Loader message={loadingMessage}></Loader>
 <div class:hide={!$mounted} class="experience-main-container w-full h-full flex flex-col justify-center items-center py-4 px-16 gap-5">
-	<div class="flex flex-col items-start w-full mb-24 pl-6 pt-28">
-		<h1 class="title text-white text-6xl tablet:scale-[1.4] tablet:translate-x-20 laptop:scale-[2.0] laptop:translate-x-72 pb-2 tablet:pr-8 opacity-70">MY EXPERIENCE</h1>
-		<div class="w-[400px] text-lg pt-2 tablet:pt-4 tablet:ml-16 laptop:ml-36 mt-6">
-			<p class="experience-main-desc">With a rich history spanning Apple, Google, SpaceX, and Tencent, I bring a wealth of experience as a developer, analyst, and marketing director. From pioneering tech solutions to crafting strategic marketing campaigns, my journey reflects a commitment to innovation, collaboration, and driving measurable impact in dynamic, global environments.</p>
+	<div class="experience-main-desc-div flex flex-col items-start w-full laptop:mb-24 mb-12 tablet:ml-6 pt-12">
+		<div class="experience-main-desc w-[460px] text-black text-lg tablet:mb-4 tablet:ml-16 laptop:ml-14 laptop:mb-14">
+			<p>With a rich history spanning Apple, Google, SpaceX, and Tencent, I bring a wealth of experience as a developer, analyst, and marketing director. From pioneering tech solutions to crafting strategic marketing campaigns, my journey reflects a commitment to innovation, collaboration, and driving measurable impact in dynamic, global environments.</p>
 		</div>
+		<h1 class="experience-title text-white text-6xl tablet:scale-[1.8] tablet:translate-x-24 laptop:scale-[2.8] laptop:translate-x-80 laptop:pr-0 opacity-70 pt-2 mt-8">MY EXPERIENCE</h1>
 	</div>
 
 	{#if data.experiencesData && data.experiencesData.length > 0}
@@ -63,9 +63,10 @@
 	.hide {
 		display: none;
 	}
-	.title {
-		font-family: page-title, Arial, Helvetica, sans-serif;
-		transition: transform 1000ms;
+	.experience-title {
+		font-family: DMSans, Arial, Helvetica, sans-serif;
+		transition-property: margin, transform, padding;
+		transition-duration: 1000ms;
 	}
 
 	.company-img:hover {
@@ -75,13 +76,21 @@
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 	}
 	.experience-button-div button {
-		transition: transform 1s;
+		transition-property: margin, transform, padding;
+		transition-duration: 800ms;
 	}
 	.experience-main-desc {
 		font-family: DMSans, Arial, Helvetica, sans-serif;
+		transition-property: margin, transform, padding;
+		transition-duration: 800ms;
+	}
+
+	.experience-main-desc-div {
+		transition-property: margin, transform, padding;
+		transition-duration: 800ms;
 	}
 
 	.experience-main-container {
-		animation: page-effect 500ms forwards linear
+		animation: page-effect 1000ms forwards linear;
 	}
 </style>

@@ -16,7 +16,7 @@
 	});
 </script>
 
-<div class="flex flex-row justify-between text-white p-2">
+<div class="flex flex-row justify-between text-gray-300 p-2">
 	<h1 class="invisible">Tony T Li</h1>
 	<nav class="w-1/2 flex flex-row justify-evenly">
 		<a href="/">Home</a>
