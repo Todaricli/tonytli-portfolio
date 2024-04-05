@@ -38,7 +38,7 @@
 			</p>
 		</div>
 		<h1
-			class="project-title text-white text-6xl tablet:scale-[1.8] tablet:translate-x-28 laptop:scale-[2.8] laptop:translate-x-80 laptop:pr-0 opacity-70 pt-10"
+			class="project-title text-white text-6xl tablet:scale-[1.8] tablet:translate-x-28 laptop:scale-[2.8] laptop:translate-x-80 laptop:pr-0 opacity-70 pt-10 laptop:pt-4"
 		>
 			MY PROJECTS
 		</h1>
