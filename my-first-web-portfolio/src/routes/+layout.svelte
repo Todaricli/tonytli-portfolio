@@ -51,7 +51,7 @@
 	</nav>
 </div>
 
-<div class="tablet:hidden top-11 left-5 fixed z-20 hover:animate-pulse" class:hide-nav-button={changePage}>
+<div class="tablet:hidden top-11 left-5 fixed z-20 hover:animate-pulse" class:hide={changePage}>
 	<button on:click={() => clickToDrop = !clickToDrop}>
 		<i class="fa-solid {clickToDrop ? closeIcon : openIcon} text-white text-3xl"></i>
 	</button>
@@ -74,12 +74,11 @@
 	<slot />
 </div>
 
-<footer class="opacity-50 sticky top-full mb-5">
-	<div>
-		<h1 class="text-center text-1xl font-bold underline text-white">JOHN SMITH</h1>
-		<p class="text-center text-white">Coded by Tony Tuocheng Li</p>
-	</div>
-	<div></div>
+<footer class="flex flex-col opacity-50 sticky top-full mb-5 text-white text-center" class:hide={changePage}>
+		<h1 class="text-1xl font-bold underline ">JOHN SMITH</h1>
+		<p>Coded by Tony Tuocheng Li</p>
+		<span>All images from <a class="underline" href="https://www.pngwing.com/en/search?q=king">PNGWING</a></span>
+		<span>All content from <a class="underline" href="https://chat.openai.com/">ChatGPT</a></span>
 </footer>
 
 <style lang="postcss">
@@ -100,10 +99,13 @@
 	}
 	.dropdown-menu, .dropdown-menu a {
 		animation: dropdown-items-effect 1s forwards linear;
-		background-color: rgba(0, 0, 0, 0.1);
 		transition-property: transform, color;
 		transition-duration: 1s;
 		font-family: DMSans, Arial, Helvetica, sans-serif;
+	}
+
+	.dropdown-menu {
+		background-color: rgba(0, 0, 0, 0.1);
 	}
 	.shade-background {
 		opacity: 25%;
@@ -122,7 +124,7 @@
 		transition-property: opacity;
 		transition-duration: 2s;
 	}
-	.hide-nav-button {
+	.hide {
 		display: none;
 	}
 </style>

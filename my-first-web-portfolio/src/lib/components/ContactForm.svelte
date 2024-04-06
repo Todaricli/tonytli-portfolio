@@ -2,14 +2,13 @@
     import { mounted } from "../store/store";
 </script>
 
-<div class="contact-main-container flex flex-col justify-center items-center">
+<div class="contact-main-container flex flex-col justify-center items-center" class:hide={!$mounted}>
 	<div class="contact-page-title-div px-24 pt-12 tablet:py-16 laptop:py-24">
 		<h2 class="contact-page-title text-3xl laptop:text-8xl tablet:text-6xl text-white opacity-75">Let's start on something incredible together</h2>
 	</div>
 
 	<div
-		class=" flex flex-col tablet:grid tablet:grid-cols-4 justify-between items-center tablet:items-start pt-8 pb-52 text-white"
-		class:hide={!$mounted}
+		class=" flex flex-col tablet:grid tablet:grid-cols-4 justify-between items-center tablet:items-start pt-8 pb-12 text-white"
 	>
 		<div class="flex flex-col col-span-3 text-2xl justify-center items-center">
 			<form action="https://getform.io/f/pagxpqeb" method="POST">

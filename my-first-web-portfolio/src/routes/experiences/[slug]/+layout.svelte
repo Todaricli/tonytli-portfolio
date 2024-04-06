@@ -83,7 +83,7 @@
 				<ul>
 					{#each data.experiencesData as singleExperience}
 						<li
-							class="experience-link hover:translate-x-5 hover:animate-pulse font-extrabold"
+							class="experience-link hover:translate-x-5 hover:animate-pulse"
 							class:current-page-link={'/experiences/' + singleExperience.slug === path}
 						>
 							<a on:click={changeState} href="/experiences/{singleExperience.slug}"

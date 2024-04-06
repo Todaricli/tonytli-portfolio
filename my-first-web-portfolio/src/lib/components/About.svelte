@@ -3,7 +3,7 @@
 </script>
 
 <div id="about" class:hide={!$mounted}
-	class="flex flex-col items-center tablet:grid tablet:grid-cols-6 tablet:items-start px-12 tablet:px-16 laptop:px-56 pt-24"
+	class="flex flex-col items-center tablet:grid tablet:grid-cols-6 tablet:items-start px-12 tablet:px-16 laptop:px-56 pt-24 laptop:h-screen"
 >
 	<div class="flex flex-col justify-center items-center col-span-2 mr-6">
 		<div class="bg-gray-100 rounded-3xl flex flex-col justify-center items-center p-2">
