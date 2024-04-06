@@ -19,14 +19,14 @@
 
 <Loader message={loadingMessage}></Loader>
 <div
-	class="project-main-container flex flex-col gap-5 justify-center item-center w-full h-full box-border py-8 tablet:px-16 laptop:px-16"
+	class="project-main-container flex flex-col gap-5 justify-center item-center w-full h-full pb-24 tablet:px-16 laptop:px-16"
 	class:hide={!$mounted}
 >
 	<div
-		class="project-main-desc-div pb-12 pl-14 flex flex-col items-start w-full tablet:pb-16 laptop:pb-24 pt-12"
+		class="project-main-desc-div pl-14 pb-12 flex flex-col items-start w-full tablet:pb-16 laptop:pb-24 pt-24 laptop:h-screen"
 	>
 		<div
-			class="project-main-desc w-[460px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-14"
+			class="project-main-desc w-[460px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24"
 		>
 			<p>
 				During my tenure at various prestigious companies like Apple, Google, SpaceX, Amazon,
@@ -42,9 +42,10 @@
 		>
 			MY PROJECTS
 		</h1>
+		<!-- <div class="w-full hidden laptop:flex flex-row justify-center items-center laptop:pt-36 text-white text-2xl animate-bounce"><i class="fa-solid fa-chevron-down"></i></div> -->
 	</div>
 	<div
-		class="project-flex-container pt-16 mx-32 flex flex-col items-center justify-center gap-5 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:grid-cols-3 laptop:mx-24"
+		class="project-flex-container pt-12 mx-16 flex flex-col items-center justify-center gap-5 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:grid-cols-3 laptop:mx-24"
 	>
 		{#if data.projects && data.projects.length > 0}
 			{#each data.projects as project (project.slug)}
@@ -69,7 +70,7 @@
 		transition-duration: 800ms;
 	}
 	.project-main-desc-div {
-		transition-property: margin, transform, padding;
+		transition-property: margin, transform, padding, height;
 		transition-duration: 800ms;
 	}
 	.project-main-container {

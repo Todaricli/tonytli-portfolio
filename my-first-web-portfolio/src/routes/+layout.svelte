@@ -27,7 +27,8 @@
 	</nav>
 </div>
 
-<slot />
+	<slot />
+
 <footer class="opacity-50 sticky top-full mb-5">
 	<h1 class="text-center text-1xl font-bold underline text-white">Welcome to HOME</h1>
 	<p class="text-center text-white">Coded by Tony Tuocheng Li</p>

@@ -21,8 +21,8 @@
 
 <Loader message={loadingMessage}></Loader>
 <div class:hide={!$mounted} class="experience-main-container w-full h-full flex flex-col justify-center items-center py-4 px-16 gap-5">
-	<div class="experience-main-desc-div flex flex-col items-start w-full laptop:mb-24 mb-12 tablet:ml-6 pt-12">
-		<div class="experience-main-desc w-[460px] text-black text-lg tablet:mb-4 tablet:ml-16 laptop:ml-14 laptop:mb-14">
+	<div class="experience-main-desc-div flex flex-col items-start w-full mb-12 laptop:mb-0 tablet:ml-6 pt-24 laptop:h-screen">
+		<div class="experience-main-desc w-[400px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24">
 			<p>With a rich history spanning Apple, Google, SpaceX, and Tencent, I bring a wealth of experience as a developer, analyst, and marketing director. From pioneering tech solutions to crafting strategic marketing campaigns, my journey reflects a commitment to innovation, collaboration, and driving measurable impact in dynamic, global environments.</p>
 		</div>
 		<h1 class="experience-title text-white text-6xl tablet:scale-[1.8] tablet:translate-x-24 laptop:scale-[2.8] laptop:translate-x-80 laptop:pr-0 opacity-70 pt-2 mt-8">MY EXPERIENCE</h1>
