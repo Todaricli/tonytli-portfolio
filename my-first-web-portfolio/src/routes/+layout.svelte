@@ -1,37 +1,85 @@
 <script>
 	import '../app.css';
-	import { globalDataLoadingDuration } from '../lib/store/store';
 	import { onMount } from 'svelte';
-	import Loader from '../lib/components/Loader.svelte';
 	import { mounted } from '../lib/store/store';
+	import { globalDataLoadingDuration } from '../lib/store/store';
 
 	$mounted = false;
-	const loadingMessage = 'Lets get started!';
+	let ScreenWidth;
+	let clickToDrop = false;
+	let changePage = false;
+	let timer;
+
+	const openIcon = 'fa-rectangle-list';
+	const closeIcon = 'fa-angle-up';
 
 	onMount(() => {
-		const timer = setTimeout(() => {
-			$mounted = true;
-		}, $globalDataLoadingDuration);
-		return () => clearTimeout(timer);
+		window.addEventListener('resize', expandNavlinks);
+
+		return () => {
+			window.removeEventListener('resize', expandNavlinks);
+			clearTimeout(timer)
+		};
 	});
+
+	function expandNavlinks() {
+		if (ScreenWidth > 740) {
+			clickToDrop = false;
+		}
+	}
+
+	function pageChangeThroughDropdownMenue() {
+		clickToDrop = !clickToDrop
+		changePage = !changePage;
+		timer = setTimeout(() => {
+			changePage = !changePage;
+		}, $globalDataLoadingDuration);
+	}
+
 </script>
 
-<div class="flex flex-row justify-between text-gray-300 p-2">
+<svelte:window bind:innerWidth={ScreenWidth} />
+
+<div class="row-navlinks tablet:flex flex-row hidden justify-between text-gray-300 p-2">
 	<h1 class="invisible">Tony T Li</h1>
 	<nav class="w-1/2 flex flex-row justify-evenly">
-		<a href="/">Home</a>
-		<a href="/experiences">Experiences</a>
-		<a href="/projects">Projects</a>
-		<a href="/about">About</a>
-		<a href="/contact">Contact</a>
+		<a class="hover:translate-y-3" href="/">Home</a>
+		<a class="hover:translate-y-3" href="/experiences">Experiences</a>
+		<a class="hover:translate-y-3" href="/projects">Projects</a>
+		<a class="hover:translate-y-3" href="/about">About</a>
+		<a class="hover:translate-y-3" href="/contact">Contact</a>
 	</nav>
 </div>
 
+<div class="tablet:hidden top-11 left-5 fixed z-20 hover:animate-pulse" class:hide-nav-button={changePage}>
+	<button on:click={() => clickToDrop = !clickToDrop}>
+		<i class="fa-solid {clickToDrop ? closeIcon : openIcon} text-white text-3xl"></i>
+	</button>
+</div>
+
+<div
+	class="w-72 top-20 left-5 fixed dropdown-menu right-5 rounded-2xl overflow-hidden z-30 p-2 text-white hidden"
+	class:showNav={clickToDrop}
+>
+	<nav class="flex flex-col justify-evenly items-center">
+		<a class="hover:translate-x-5 hover:text-stone-400" on:click={pageChangeThroughDropdownMenue} href="/">Home</a>
+		<a class="hover:translate-x-5 hover:text-stone-400" on:click={pageChangeThroughDropdownMenue} href="/experiences">Experiences</a>
+		<a class="hover:translate-x-5 hover:text-stone-400" on:click={pageChangeThroughDropdownMenue} href="/projects">Projects</a>
+		<a class="hover:translate-x-5 hover:text-stone-400" on:click={pageChangeThroughDropdownMenue} href="/about">About</a>
+		<a class="hover:translate-x-5 hover:text-stone-400" on:click={pageChangeThroughDropdownMenue} href="/contact">Contact</a>
+	</nav>
+</div>
+
+<div class="slot-wrapper" class:shade-background={clickToDrop}>
 	<slot />
+</div>
 
 <footer class="opacity-50 sticky top-full mb-5">
-	<h1 class="text-center text-1xl font-bold underline text-white">Welcome to HOME</h1>
-	<p class="text-center text-white">Coded by Tony Tuocheng Li</p>
+	<div>
+		<h1 class="text-center text-1xl font-bold underline text-white">JOHN SMITH</h1>
+		<p class="text-center text-white">Coded by Tony Tuocheng Li</p>
+	</div>
+	<div></div>
 </footer>
 
 <style lang="postcss">
@@ -49,5 +97,32 @@
 		/* background-color: theme(colors.stone.950); */
 		width: 100%;
 		min-height: 100vh;
+	}
+	.dropdown-menu, .dropdown-menu a {
+		animation: dropdown-items-effect 1s forwards linear;
+		background-color: rgba(0, 0, 0, 0.1);
+		transition-property: transform, color;
+		transition-duration: 1s;
+		font-family: DMSans, Arial, Helvetica, sans-serif;
+	}
+	.shade-background {
+		opacity: 25%;
+	}
+
+	.showNav {
+		display: block;
+	}
+
+	.row-navlinks, .row-navlinks a {
+		transition-property: position, display, transform, color;
+		transition-duration: 1s;
+		font-family: DMSans, Arial, Helvetica, sans-serif;
+	}
+	.slot-wrapper {
+		transition-property: opacity;
+		transition-duration: 2s;
+	}
+	.hide-nav-button {
+		display: none;
 	}
 </style>

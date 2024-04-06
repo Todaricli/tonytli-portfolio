@@ -3,6 +3,7 @@
 	import { globalDataLoadingDuration } from '../../lib/store/store';
 	import Loader from '../../lib/components/Loader.svelte';
     import { mounted } from '../../lib/store/store';
+	import About from '../../lib/components/About.svelte';
 
     $mounted = false;
 
@@ -17,13 +18,4 @@
 </script>
 
 <Loader message={loadingMessage}></Loader>
-
-<div class:hide={!$mounted}>
-	<h1 class="text-white text-3xl">I am about</h1>
-</div>
-
-<style>
-	.hide {
-		display: none;
-	}
-</style>
+<About></About>

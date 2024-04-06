@@ -42,7 +42,7 @@
 		>
 			MY PROJECTS
 		</h1>
-		<!-- <div class="w-full hidden laptop:flex flex-row justify-center items-center laptop:pt-36 text-white text-2xl animate-bounce"><i class="fa-solid fa-chevron-down"></i></div> -->
+		<div class="w-full hidden laptop:flex flex-row justify-center items-center laptop:pt-36 text-white text-2xl animate-bounce opacity-50"><i class="fa-solid fa-chevron-down"></i></div>
 	</div>
 	<div
 		class="project-flex-container pt-12 mx-16 flex flex-col items-center justify-center gap-5 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:grid-cols-3 laptop:mx-24"
@@ -66,12 +66,12 @@
 	}
 	.project-main-desc {
 		font-family: DMSans, Arial, Helvetica, sans-serif;
-		transition-property: margin, transform, padding;
-		transition-duration: 800ms;
+		transition-property: margin, transform, padding, text-wrap, word-wrap;
+		transition-duration: 1000ms;
 	}
 	.project-main-desc-div {
 		transition-property: margin, transform, padding, height;
-		transition-duration: 800ms;
+		transition-duration: 1000ms;
 	}
 	.project-main-container {
 		animation: page-effect 1000ms forwards linear;

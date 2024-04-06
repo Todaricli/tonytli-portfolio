@@ -1,7 +1,5 @@
 <script>
 	export let singleExperience;
-	import { isExperienceMounted } from "../store/store";
-	console.log($isExperienceMounted + 'DDDDDD')
 </script>
 
 

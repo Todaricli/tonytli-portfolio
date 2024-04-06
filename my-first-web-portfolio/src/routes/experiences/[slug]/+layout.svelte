@@ -6,6 +6,7 @@
 	let ScreenWidth;
 	let clickToDrop = false;
 	let path;
+	let timer;
 
 	const openIcon = 'fa-bars-staggered';
 	const closeIcon = 'fa-angle-up';
@@ -19,21 +20,20 @@
 	function changeState() {
 		$isExperienceMounted = false;
 
-		const timer = setTimeout(() => {
+		timer = setTimeout(() => {
 			$isExperienceMounted = true;
 			path = window.location.pathname;
 		}, 200);
 	}
 
-	onMount(() => {
-		path = window.location.pathname;
-	});
-
 	onMount(() => {		
+		path = window.location.pathname;
 		window.addEventListener('resize', expandExperienceNavlinks);
 		
 		return () => {
 			window.removeEventListener('resize', expandExperienceNavlinks);
+			clearTimeout(timer)
+
 		}
 	});
 </script>
@@ -75,7 +75,7 @@
 			>
 		</div>
 		<div
-			class="dropdown-menu fixed right-8 top-16 w-80 rounded-2xl overflow-hidden z-10 hidden p-2"
+			class="dropdown-menu fixed right-5 top-16 w-80 rounded-2xl overflow-hidden z-10 hidden p-2"
 			class:dropdown={clickToDrop}
 		>
 			<h2 class="other-experience text-gray-400 text-2xl">OTHER EXPERIENCES</h2>
