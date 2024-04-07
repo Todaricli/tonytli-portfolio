@@ -23,5 +23,21 @@ node --version
 npm --version
 ```
 ## If you **_have node.js and npm installed_** at your device:
-- ### Clone this repository to your desired local repository
+### 1. Clone this repository to your desired local repository
 ```
+git clone https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli.git
+```
+### 2. Navigate to proper repository
+```
+cd cs732-assignment-Todaricli
+cd my-first-web-portfolio
+```
+### 3. Install all the dependencies
+```
+npm install
+```
+### 4. Run the app
+```
+npm run dev
+```
+
