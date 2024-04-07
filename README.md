@@ -59,8 +59,11 @@ If you have both of them succesfully downloaded, and check their installation st
 <img width="580" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/109b2e0b-ff4a-4864-bf21-5bb0803189c4">
 
 # PROJECT INTRODUCTION
+**Note:** Only some of the key aspects are conveyed here
+
 ## 1. Routing
-When inspect the code for this app, you will able to find a block of code as shown below, these are the [navlink](my-first-web-portfolio/src/routes/+layout.svelte) on the top of the webpage, it also conveys the overall struture of this web portfolio
+- ### Overall structure
+When inspect the code for this app, you will able to find a block of code as shown below, these are the [navlinks](my-first-web-portfolio/src/routes/+layout.svelte) on the top of the webpage, it also conveys the overall struture of this web portfolio
 ```
 	<nav class="w-1/2 flex flex-row justify-evenly">
 		<a class="hover:translate-y-3" href="/">Home</a>
@@ -73,4 +76,22 @@ When inspect the code for this app, you will able to find a block of code as sho
 You might also find this block of code looks somewhat similar to the structure of the files. Thats right! **In svelte, the routes are determined by the struture within the **routes** folder as shown below: 
 
 <img width="214" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/9559333d-d112-4b7a-98ff-fe4f4450d7f9">
+
+- ### Sub-routes
+Sometimes, we will need to have many sub-routes path under one major route path, in my case, the owner of the portfolio might have many experiences, and creating new file for each experience is tedious and not desirable. Thus, we can rely on svelte route parameter and utilize load() function to figure which experience the user want to navigate to.
+```
+<a on:click={changeState} href="/experiences/{singleExperience.slug}">{singleExperience.title}</a>
+```
+Once the above anchor tag is clicked, we will have a server-side code to find the experience's company key that matches the params slug key value as shown below, and it is [located](/my-first-web-portfolio/src/routes/experiences/[slug]/+page.server.js) in [slug] folder inside experience, so its scope only cover if user navigate through experience main page.
+```
+export function load({ params }) {
+	const singleExperience = jobExperiences.find((experience) => experience.company === params.slug);
+
+	if (!singleExperience) throw error(404);
+
+	return {
+		singleExperience
+	};
+}
+```
 
