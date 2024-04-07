@@ -110,7 +110,7 @@ export function load({ params }) {
 <img width="194" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/c433cde9-5508-4e33-98d8-de1b2b0ef34a">
 
 ## 1. State management
-- ### Simple state management
+### 2. Simple state management
 If you comming from react, you might know that to enable react to re-render, you will need useState() function. In svelte, it is much easier. For example, when screen-width is small, the above experiences Navlinks will change to a button, once user click the button, a Navlinks div will display and allow them to navigate to different experiences. To trigger svelte re-render following this action, we just need to simply declare a variable inside the script block, and any changes to that variable later on, svelte is smart enough to re-render it based on the value. 
 
 You might also notice how easy it is to write a click event handling in svelte, in this case, I use `on:click` directive with the button, and there are much more [directives](https://svelte.dev/docs/element-directives) in svelte you can use.
@@ -130,7 +130,7 @@ In the webpage, the above looks something like this:
 
 <img width="586" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/cfe9e17f-be4d-4ae9-b9cd-16dde7270017">
 
-- ### Value Binding
+### 2. Value Binding
 One of the directive used in the web app allows value of a html element bind with a variable inside your script, my used case is I would like to detect if the browser-width is below certain number, I will collapse dropdown navlinks as mentioned above.
 
 **Following from the above illustration:**
@@ -158,4 +158,32 @@ onMount(() => {
 <svelte:window bind:innerWidth={ScreenWidth} />
 ```
 As shown in the above code block, we used `<svelte/>` in this case as an element, and binded its innerWidth value with screenWidth, so whenever the broswer size changes, the ScreenWidth will get updated. As you might noticed, there is a onMount() function, it is build-in function in svelte, it runs after the component is first rendered to the DOM. Here, we can safely access JS variable window (_might throw errors if not in there_), and register it with a event handler to make the function runing whenever the browser width changed. The onMount() function is also a good tool to enable some animation if the content is taking longer time to load, or need to get some data only if the DOM mounted.
+
+### 3. Svelte/store
+Sometimes, we need have a global-scoped variable, that can access through everything, and its value get updated everywhere, as well as be able to trigger re-rendering when its value changes. In svelte, we have a svelte/store to help us, there are readable, writable and derived stores, their names are self-explantory that some might only allow read-only or also allow re-write. In my case, I used writable store to monitor whether a DOM is mounted or not, and hence determined whether should continue animating.
+
+**Inside [store.js](/my-first-web-portfolio/src/lib/store/store.js)**
+```
+import { writable} from "svelte/store";
+export let mounted = writable(false)
+
+mounted.subscribe((mounted) => console.log(mounted));
+```
+**Inside my [homepage](/my-first-web-portfolio/src/routes/+page.svelte) svelte file**
+```
+<script>
+import { mounted } from '../lib/store/store';
+$mounted = false;
+
+	onMount(() => {
+		const timer = setTimeout(() => {
+			$mounted = true;
+		}, $globalDataLoadingDuration);
+		return () => clearTimeout(timer);
+	});
+</script>
+
+<div class="flex flex-col justify-start min-h-screen" class:hide={!$mounted}>
+```
+To explain the above code block, the writeable store `mounted` initially set to false, when svelte execute the script we set it to false again to handle the case after setting to true. When all DOM in the file mounted, we set it to true. **Notice that how I access `mounted` as `$mounted`**, in svelte we can use $ to trigger update() or subscribe() build-in function with store and trigger re-rendering. In this case, I purposely delay the `$mounted` set to true, because there are not much content or data to load, and thus the actual mounting time is too short for animation to display.
 
