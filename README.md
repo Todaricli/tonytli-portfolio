@@ -65,7 +65,7 @@ If you have both of them succesfully downloaded, and check their installation st
 **Note:** Only some of the key aspects are conveyed here
 
 ## 1. Routing
-- ### Overall structure
+### 1. Overall structure
 When inspect the code for this app, you will able to find a block of code as shown below, these are the [navlinks](my-first-web-portfolio/src/routes/+layout.svelte) on the top of the webpage, it also conveys the overall struture of this web portfolio
 ```
 	<nav class="w-1/2 flex flex-row justify-evenly">
@@ -80,7 +80,7 @@ You might also find this block of code looks somewhat similar to the structure o
 
 <img width="214" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/9559333d-d112-4b7a-98ff-fe4f4450d7f9">
 
-- ### Sub-routes
+- ### 2. Sub-routes
 Sometimes, we will need to have many sub-routes path under one major route path, in my case, the owner of the portfolio might have many experiences, and creating new file for each experience is tedious and not desirable. Thus, we can rely on svelte route parameter and utilize load() function to figure out which experience the user want to navigate to.
 ```
 <a on:click={changeState} href="/experiences/{singleExperience.slug}">{singleExperience.title}</a>
@@ -105,8 +105,8 @@ export function load({ params }) {
 
 <img width="194" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/c433cde9-5508-4e33-98d8-de1b2b0ef34a">
 
-## 1. State management
-### 2. Simple state management
+## 2. State management
+### 1. Simple state management
 If you comming from react, you might know that to enable react to re-render, you will need useState() function. In svelte, it is much easier. For example, when screen-width is small, the above experiences Navlinks will change to a button, once user click the button, a Navlinks div will display and allow them to navigate to different experiences. To trigger svelte re-render following this action, we just need to simply declare a variable inside the script block, and any changes to that variable later on, svelte is smart enough to re-render it based on the value. 
 
 You might also notice how easy it is to write a click event handling in svelte, in this case, I use `on:click` directive with the button, and there are much more [directives](https://svelte.dev/docs/element-directives) in svelte you can use.
