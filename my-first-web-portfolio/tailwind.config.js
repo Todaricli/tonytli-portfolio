@@ -6,7 +6,7 @@ export default {
     screens: {
       'tablet': '740px',
       'laptop': '1124px',
-      'desktop': '1280px',
+      'desktop': '1560px',
     },
     plugins: [],
   }
