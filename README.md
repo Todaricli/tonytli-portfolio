@@ -58,3 +58,19 @@ If you have both of them succesfully downloaded, and check their installation st
 
 <img width="580" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/109b2e0b-ff4a-4864-bf21-5bb0803189c4">
 
+# PROJECT INTRODUCTION
+## 1. Routing
+When inspect the code for this app, you will able to find a block of code as shown below, these are the [navlink](my-first-web-portfolio/src/routes/+layout.svelte) on the top of the webpage, it also conveys the overall struture of this web portfolio
+```
+	<nav class="w-1/2 flex flex-row justify-evenly">
+		<a class="hover:translate-y-3" href="/">Home</a>
+		<a class="hover:translate-y-3" href="/experiences">Experiences</a>
+		<a class="hover:translate-y-3" href="/projects">Projects</a>
+		<a class="hover:translate-y-3" href="/about">About</a>
+		<a class="hover:translate-y-3" href="/contact">Contact</a>
+	</nav>
+```
+You might also find this block of code looks somewhat similar to the structure of the files. Thats right! **In svelte, the routes are determined by the struture within the **routes** folder as shown below: 
+
+<img width="214" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/9559333d-d112-4b7a-98ff-fe4f4450d7f9">
+
