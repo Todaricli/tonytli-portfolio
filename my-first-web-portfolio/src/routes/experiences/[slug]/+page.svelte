@@ -2,9 +2,6 @@
 	export let data;
 	import SingleExperience from '$lib/components/SingleExperience.svelte';
 	import { isExperienceMounted } from '../../../lib/store/store';
-	import { onMount } from 'svelte';
-
-	console.log($isExperienceMounted + 'ins husjs');
 
 </script>
 
