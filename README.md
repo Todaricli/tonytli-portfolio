@@ -58,8 +58,11 @@ If you have both of them succesfully downloaded, and check their installation st
 
 <img width="580" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/109b2e0b-ff4a-4864-bf21-5bb0803189c4">
 
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 # PROJECT INTRODUCTION
@@ -127,5 +130,32 @@ In the webpage, the above looks something like this:
 
 <img width="586" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/cfe9e17f-be4d-4ae9-b9cd-16dde7270017">
 
+- ### Value Binding
+One of the directive used in the web app allows value of a html element bind with a variable inside your script, my used case is I would like to detect if the browser-width is below certain number, I will collapse dropdown navlinks as mentioned above.
 
+**Following from the above illustration:**
+```
+<script>
+let ScreenWidth;
+
+function expandExperienceNavlinks() {
+	if(ScreenWidth > 740) {
+		clickToDrop = false;
+	}
+}
+
+onMount(() => {		
+	path = window.location.pathname;
+	window.addEventListener('resize', expandExperienceNavlinks);
+		
+	return () => {
+		window.removeEventListener('resize', expandExperienceNavlinks);
+	}
+});
+</script>
+```
+```
+<svelte:window bind:innerWidth={ScreenWidth} />
+```
+As shown in the above code block, we used `<svelte/>` in this case as an element, and binded its innerWidth value with screenWidth, so whenever the broswer size changes, the ScreenWidth will get updated. As you might noticed, there is a onMount() function, it is build-in function in svelte, it runs after the component is first rendered to the DOM. Here, we can safely access JS variable window (_might throw errors if not in there_), and register it with a event handler to make the function runing whenever the browser width changed. The onMount() function is also a good tool to enable some animation if the content is taking longer time to load, or need to get some data only if the DOM mounted.
 
