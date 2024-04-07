@@ -4,7 +4,7 @@
 
 <div class="contact-main-container flex flex-col justify-center items-center" class:hide={!$mounted}>
 	<div class="contact-page-title-div px-24 pt-12 tablet:py-16 laptop:py-24">
-		<h2 class="contact-page-title text-3xl laptop:text-8xl tablet:text-6xl text-white opacity-75">Let's start on something incredible together</h2>
+		<h2 class="contact-page-title text-3xl laptop:text-8xl tablet:text-6xl text-white opacity-75 desktop:text-9xl desktop:px-48">Let's start on something incredible together</h2>
 	</div>
 
 	<div
@@ -17,19 +17,22 @@
 						<label for="name">Name:</label>
 						<input
 							required
+							id="name"
 							class="bg-transparent"
 							type="text"
 							name="name"
 							placeholder="John Smith"
+							autocomplete="on"
 						/>
 					</div>
 					<div class="flex flex-col form-col gap-4">
 						<label for="email">Email:</label>
-						<input required type="email" name="email" placeholder="john@Smith.com" />
+						<input required id="email" type="email" name="email" placeholder="john@Smith.com" autocomplete="on" />
 					</div>
 					<div class="flex flex-col form-col gap-4 items-start">
 						<label for="message">Message:</label>
 						<textarea
+							id="message"
 							class="h-32"
 							type="text"
 							name="message"
