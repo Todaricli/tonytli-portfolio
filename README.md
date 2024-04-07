@@ -15,7 +15,6 @@ Building a web portfolio is key for developers! It's like your online resume but
 # TO START
 ## Check node.js and npm installation
 open any terminal and run:
-
 ```
 node --version
 ```
@@ -61,9 +60,6 @@ If you have both of them succesfully downloaded, and check their installation st
 <br>
 <br>
 <br>
-<br>
-<br>
-
 
 # PROJECT INTRODUCTION
 **Note:** Only some of the key aspects are conveyed here
@@ -85,7 +81,7 @@ You might also find this block of code looks somewhat similar to the structure o
 <img width="214" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/9559333d-d112-4b7a-98ff-fe4f4450d7f9">
 
 - ### Sub-routes
-Sometimes, we will need to have many sub-routes path under one major route path, in my case, the owner of the portfolio might have many experiences, and creating new file for each experience is tedious and not desirable. Thus, we can rely on svelte route parameter and utilize load() function to figure which experience the user want to navigate to.
+Sometimes, we will need to have many sub-routes path under one major route path, in my case, the owner of the portfolio might have many experiences, and creating new file for each experience is tedious and not desirable. Thus, we can rely on svelte route parameter and utilize load() function to figure out which experience the user want to navigate to.
 ```
 <a on:click={changeState} href="/experiences/{singleExperience.slug}">{singleExperience.title}</a>
 ```
@@ -101,7 +97,7 @@ export function load({ params }) {
 	};
 }
 ```
-**(Inside the webpage, it will look like the navlinks at the LHS, and it path display on the top)**
+**(Inside the webpage, it will look like the navlinks at the RHS, and it path display on the top)**
 
 <img width="797" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/a26ae532-0969-4f79-96b5-d414ac30bb56">
 
@@ -186,4 +182,78 @@ $mounted = false;
 <div class="flex flex-col justify-start min-h-screen" class:hide={!$mounted}>
 ```
 To explain the above code block, the writeable store `mounted` initially set to false, when svelte execute the script we set it to false again to handle the case after setting to true. When all DOM in the file mounted, we set it to true. **Notice that how I access `mounted` as `$mounted`**, in svelte we can use $ to trigger update() or subscribe() build-in function with store and trigger re-rendering. In this case, I purposely delay the `$mounted` set to true, because there are not much content or data to load, and thus the actual mounting time is too short for animation to display.
+
+### 4. Others
+- **Component:**
+```
+<script>
+import SingleExperience from '$lib/components/SingleExperience.svelte';
+</script>
+
+<div class:experience-effect={$isExperienceMounted} class:hide={!$isExperienceMounted}>
+	<SingleExperience singleExperience={data.singleExperience}></SingleExperience>
+</div>
+```
+In svelte, we can create various component for code re-using and enhancing semantic clarity purposes, we can create componement in `lib/components`, and we able to passed data into component as shown above. 
+
+In `lib/components/SingleExperience.svelte`, we simply need to do the following to allow data pass in:
+```
+<script>
+	export let singleExperience;
+</script>
+```
+- **Logic Block:**
+This usage consider self-explantory
+```
+{#if data.projects && data.projects.length > 0}
+	{#each data.projects as project (project.slug)}
+		<SingleProject {project} />
+	{/each}
+{/if}
+```
+
+## 3. Tailwind CSS
+### 1. Default usage
+Tailwind CSS has many pre-defined classes, we simply need to add them to a element class attribute as shown below
+```
+<h1 class="text-xl font-bold underline ">JOHN SMITH</h1>
+```
+On [Tailwind CSS](https://tailwindcss.com/docs/font-size) website:
+
+<img width="453" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/ed6684ef-b8df-43c5-a147-e7a3174c9611">
+
+The look:
+
+<img width="275" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/442b3a31-7564-4648-8a61-809a3a37b69a">
+
+### 2. Customization
+Inside the [tailwind.config.js](/my-first-web-portfolio/tailwind.config.js), you can customize some css for your application, such as, I defined my own device screen width options:
+```
+theme: {
+    extend: {},
+    screens: {
+      'tablet': '740px',
+      'laptop': '1124px',
+      'desktop': '1560px',
+    },
+```
+In other svelte files:
+```
+<div class="text-slides">
+	<h1 class="text-[188px] desktop:text-[220px]">John Smith - Prospective Web Developer</h1>
+</div>
+```
+# REFERENCE
+[1] [SvelteKit Intro](https://kit.svelte.dev/docs/introduction)
+[2] [SvelteKit Routing](https://kit.svelte.dev/docs/routing)
+[3] [SvelteKit Loading Data](https://kit.svelte.dev/docs/load)
+[4] [Svelte Components](https://svelte.dev/docs/svelte-components)
+[5] [Svelte Element Directive](https://svelte.dev/docs/element-directives)
+[6] [Svelte/Store](https://svelte.dev/docs/svelte-store)
+[7] [Svelte Logic block](https://svelte.dev/docs/logic-blocks)
+[8] [Install Tailwind CSS with SvelteKit](https://tailwindcss.com/docs/guides/sveltekit)
+[9] [Tailwind css doc](https://tailwindcss.com/docs/installation)
+
+
+
 
