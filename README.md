@@ -40,7 +40,7 @@ npm install
 ```
 npm run dev
 ```
-**Now, the app should be up and runing at the port http://localhost:5173/
+**Now, the app should be up and runing at the port http://localhost:5173/**
 
 ## If you **_do not have_** node.js and npm installed at your device:
 ### 1. Download them
