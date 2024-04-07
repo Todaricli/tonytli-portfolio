@@ -94,4 +94,13 @@ export function load({ params }) {
 	};
 }
 ```
+**Inside the webpage, it will look like the navlinks at the LHS, and it path display on the top:**
+
+<img width="797" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/a26ae532-0969-4f79-96b5-d414ac30bb56">
+
+**However, inside the file structure, we only have three files reponsible for rendering all experiences as shown below:**
+
+<img width="194" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/c433cde9-5508-4e33-98d8-de1b2b0ef34a">
+
+
 
