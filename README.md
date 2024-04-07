@@ -58,6 +58,10 @@ If you have both of them succesfully downloaded, and check their installation st
 
 <img width="580" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/109b2e0b-ff4a-4864-bf21-5bb0803189c4">
 
+
+
+
+
 # PROJECT INTRODUCTION
 **Note:** Only some of the key aspects are conveyed here
 
@@ -94,16 +98,16 @@ export function load({ params }) {
 	};
 }
 ```
-**Inside the webpage, it will look like the navlinks at the LHS, and it path display on the top:**
+**(Inside the webpage, it will look like the navlinks at the LHS, and it path display on the top)**
 
 <img width="797" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/a26ae532-0969-4f79-96b5-d414ac30bb56">
 
-**However, inside the file structure, we only have three files reponsible for rendering all experiences as shown below:**
+**(However, inside the file structure, we only have three files reponsible for rendering all experiences as shown below)**
 
 <img width="194" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/c433cde9-5508-4e33-98d8-de1b2b0ef34a">
 
 ## 1. State management
-- ### simple state management
+- ### Simple state management
 If you comming from react, you might know that to enable react to re-render, you will need useState() function. In svelte, it is much easier. For example, when screen-width is small, the above experiences Navlinks will change to a button, once user click the button, a Navlinks div will display and allow them to navigate to different experiences. To trigger svelte re-render following this action, we just need to simply declare a variable inside the script block, and any changes to that variable later on, svelte is smart enough to re-render it based on the value. 
 
 You might also notice how easy it is to write a click event handling in svelte, in this case, I use `on:click` directive with the button, and there are much more [directives](https://svelte.dev/docs/element-directives) in svelte you can use.
@@ -119,5 +123,9 @@ class="text-white text-1xl rounded-3xl tablet:hidden z-20 hover:animate-pulse">
 <i class="w-full fa-solid {clickToDrop ? closeIcon : openIcon} text-white text-3xl"></i>
 </button>
 ```
+In the webpage, the above looks something like this:
+
+<img width="586" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/cfe9e17f-be4d-4ae9-b9cd-16dde7270017">
+
 
 
