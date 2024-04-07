@@ -75,7 +75,7 @@
 </div>
 
 <footer class="flex flex-col opacity-50 sticky top-full mb-5 text-white text-center" class:hide={changePage}>
-		<h1 class="text-1xl font-bold underline ">JOHN SMITH</h1>
+		<h1 class="text-xl font-bold underline ">JOHN SMITH</h1>
 		<p>Coded by Tony Tuocheng Li</p>
 		<span>All images from <a class="underline" href="https://www.pngwing.com/en/search?q=king">PNGWING</a></span>
 		<span>All content from <a class="underline" href="https://chat.openai.com/">ChatGPT</a></span>
