@@ -80,7 +80,7 @@ When inspect the code for this app, you will able to find a block of code as sho
 		<a class="hover:translate-y-3" href="/contact">Contact</a>
 	</nav>
 ```
-You might also find this block of code looks somewhat similar to the structure of the files. Thats right! **In svelte, the routes are determined by the struture within the **routes** folder as shown below: 
+You might also find this block of code looks somewhat similar to the structure of the files. Thats right! **In svelte, the routes are determined by the struture within the _routes_ folder as shown below:**
 
 <img width="214" alt="image" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/9559333d-d112-4b7a-98ff-fe4f4450d7f9">
 
