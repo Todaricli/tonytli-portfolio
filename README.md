@@ -245,13 +245,21 @@ In other svelte files:
 ```
 # REFERENCE
 [1] [SvelteKit Intro](https://kit.svelte.dev/docs/introduction)
+
 [2] [SvelteKit Routing](https://kit.svelte.dev/docs/routing)
+
 [3] [SvelteKit Loading Data](https://kit.svelte.dev/docs/load)
+
 [4] [Svelte Components](https://svelte.dev/docs/svelte-components)
+
 [5] [Svelte Element Directive](https://svelte.dev/docs/element-directives)
+
 [6] [Svelte/Store](https://svelte.dev/docs/svelte-store)
+
 [7] [Svelte Logic block](https://svelte.dev/docs/logic-blocks)
+
 [8] [Install Tailwind CSS with SvelteKit](https://tailwindcss.com/docs/guides/sveltekit)
+
 [9] [Tailwind css doc](https://tailwindcss.com/docs/installation)
 
 
