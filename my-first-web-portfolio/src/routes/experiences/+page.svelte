@@ -12,25 +12,45 @@
 	onMount(() => {
 		const timer = setTimeout(() => {
 			$mounted = true;
-			console.log($mounted + "in experience")
 		}, $globalDataLoadingDuration);
 		return () => clearTimeout(timer);
 	});
-
 </script>
 
 <Loader message={loadingMessage}></Loader>
-<div class:hide={!$mounted} class="experience-main-container w-full h-full flex flex-col justify-center items-center py-4 px-16">
-	<div class="experience-main-desc-div flex flex-col items-start w-full mb-12 laptop:mb-0 tablet:ml-6 pt-24 laptop:min-h-screen">
-		<div class="experience-main-desc w-[400px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24">
-			<p>With a rich history spanning Apple, Google, SpaceX, and Tencent, I bring a wealth of experience as a developer, analyst, and marketing director. From pioneering tech solutions to crafting strategic marketing campaigns, my journey reflects a commitment to innovation, collaboration, and driving measurable impact in dynamic, global environments.</p>
+<div
+	class:hide={!$mounted}
+	class="experience-main-container w-full h-full flex flex-col justify-center items-center py-4 px-16"
+>
+	<div
+		class="experience-main-desc-div flex flex-col items-start w-full mb-12 laptop:mb-0 tablet:ml-6 pt-24 laptop:min-h-screen"
+	>
+		<div
+			class="experience-main-desc w-[400px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24"
+		>
+			<p>
+				With a rich history spanning Apple, Google, SpaceX, and Tencent, I bring a wealth of
+				experience as a developer, analyst, and marketing director. From pioneering tech solutions
+				to crafting strategic marketing campaigns, my journey reflects a commitment to innovation,
+				collaboration, and driving measurable impact in dynamic, global environments.
+			</p>
 		</div>
-		<h1 class="experience-title text-white text-6xl tablet:scale-[1.8] tablet:translate-x-24 laptop:scale-[2.8] laptop:translate-x-80 laptop:pr-0 desktop:scale-[3.5] desktop:translate-x-[530px] opacity-70 pt-2 mt-8">MY EXPERIENCE</h1>
-		<div class="w-full hidden laptop:flex flex-row justify-center items-center text-white text-2xl animate-bounce opacity-50 laptop:pt-36 desktop:pt-48"><i class="fa-solid fa-chevron-down"></i></div>
+		<h1
+			class="experience-title text-white text-6xl tablet:scale-[1.8] tablet:translate-x-24 laptop:scale-[2.8] laptop:translate-x-80 laptop:pr-0 desktop:scale-[3.5] desktop:translate-x-[530px] opacity-70 pt-2 mt-8"
+		>
+			MY EXPERIENCE
+		</h1>
+		<div
+			class="w-full hidden laptop:flex flex-row justify-center items-center text-white text-2xl animate-bounce opacity-50 laptop:pt-36 desktop:pt-48"
+		>
+			<i class="fa-solid fa-chevron-down"></i>
+		</div>
 	</div>
 
 	{#if data.experiencesData && data.experiencesData.length > 0}
-		<div class="experience-flex-container flex flex-col justify-center items-center tablet:grid tablet:grid-cols-2 gap-16 pt-12 pb-24">
+		<div
+			class="experience-flex-container flex flex-col justify-center items-center tablet:grid tablet:grid-cols-2 gap-16 pt-12 pb-24"
+		>
 			{#each data.experiencesData as singleExperience}
 				<div class="rounded-3xl flex flex-col justify-start items-start w-full h-full">
 					<div
