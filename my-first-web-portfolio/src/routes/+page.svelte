@@ -6,11 +6,10 @@
 
 	const loadingMessage = 'Home.';
 	$mounted = false;
-
+	let timer;
 	onMount(() => {
-		const timer = setTimeout(() => {
+		timer = setTimeout(() => {
 			$mounted = true;
-			console.log($mounted + 'in project');
 		}, $globalDataLoadingDuration);
 		return () => clearTimeout(timer);
 	});

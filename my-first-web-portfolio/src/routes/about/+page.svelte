@@ -6,11 +6,12 @@
 	import About from '../../lib/components/About.svelte';
 
 	$mounted = false;
+	let timer;
 
 	const loadingMessage = 'About.';
 
 	onMount(() => {
-		const timer = setTimeout(() => {
+		timer = setTimeout(() => {
 			$mounted = true;
 		}, $globalDataLoadingDuration);
 		return () => clearTimeout(timer);

@@ -7,9 +7,10 @@
 
 	const loadingMessage = 'Contact.';
 	$mounted = false;
+	let timer;
 
 	onMount(() => {
-		const timer = setTimeout(() => {
+		timer = setTimeout(() => {
 			$mounted = true;
 			console.log($mounted + 'in contact');
 		}, $globalDataLoadingDuration);

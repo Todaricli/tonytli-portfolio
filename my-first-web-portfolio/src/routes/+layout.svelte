@@ -14,10 +14,8 @@
 	const closeIcon = 'fa-angle-up';
 
 	onMount(() => {
-		window.addEventListener('resize', expandNavlinks);
 
 		return () => {
-			window.removeEventListener('resize', expandNavlinks);
 			clearTimeout(timer)
 		};
 	});
@@ -38,7 +36,7 @@
 
 </script>
 
-<svelte:window bind:innerWidth={ScreenWidth} />
+<svelte:window on:resize={expandNavlinks} bind:innerWidth={ScreenWidth} />
 
 <div class="row-navlinks tablet:flex flex-row hidden justify-between text-gray-300 p-2">
 	<h1 class="invisible">Tony T Li</h1>

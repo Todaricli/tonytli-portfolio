@@ -8,9 +8,10 @@
 
 	$mounted = false;
 	const loadingMessage = 'Experience.';
+	let timer;
 
 	onMount(() => {
-		const timer = setTimeout(() => {
+		timer = setTimeout(() => {
 			$mounted = true;
 		}, $globalDataLoadingDuration);
 		return () => clearTimeout(timer);
