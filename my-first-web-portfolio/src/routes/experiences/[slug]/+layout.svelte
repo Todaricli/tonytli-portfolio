@@ -28,17 +28,14 @@
 
 	onMount(() => {		
 		path = window.location.pathname;
-		window.addEventListener('resize', expandExperienceNavlinks);
 		
 		return () => {
-			window.removeEventListener('resize', expandExperienceNavlinks);
 			clearTimeout(timer)
-
 		}
 	});
 </script>
 
-<svelte:window bind:innerWidth={ScreenWidth} />
+<svelte:window on:resize={expandExperienceNavlinks} bind:innerWidth={ScreenWidth} />
 
 <div class="experience-main-container w-full h-full flex flex-col justify-center items-center p-8">
 	<div
