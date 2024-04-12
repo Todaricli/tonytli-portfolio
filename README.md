@@ -41,6 +41,10 @@ npm run dev
 ```
 **Now, the app should be up and runing at the port http://localhost:5173/**
 
+**To allow the svelte files properly display in VScode, you need to install Svelte for VS code plugin**
+
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/8a6d3143-050d-4346-8dee-c53008f3f19c)
+
 ## If you **_do not have_** node.js and npm installed at your device:
 ### 1. Download them
 Go to [node.js](https://nodejs.org/en/download) website, and download the appropriate version for your device (i.e. MacOS or Windows)
@@ -139,21 +143,12 @@ function expandExperienceNavlinks() {
 		clickToDrop = false;
 	}
 }
-
-onMount(() => {		
-	path = window.location.pathname;
-	window.addEventListener('resize', expandExperienceNavlinks);
-		
-	return () => {
-		window.removeEventListener('resize', expandExperienceNavlinks);
-	}
-});
 </script>
 ```
 ```
-<svelte:window bind:innerWidth={ScreenWidth} />
+<svelte:window on:resize={expandExperienceNavlinks} bind:innerWidth={ScreenWidth} />
 ```
-As shown in the above code block, we used `<svelte/>` in this case as an element, and binded its innerWidth value with screenWidth, so whenever the broswer size changes, the ScreenWidth will get updated. As you might noticed, there is a onMount() function, it is build-in function in svelte, it runs after the component is first rendered to the DOM. Here, we can safely access JS variable window (_might throw errors if not in there_), and register it with a event handler to make the function runing whenever the browser width changed. The onMount() function is also a good tool to enable some animation if the content is taking longer time to load, or need to get some data only if the DOM mounted.
+As shown in the above code block, we used `<svelte/>` in this case as an element, and binded its innerWidth value with screenWidth, so whenever the broswer size changes, the ScreenWidth will get updated.
 
 ### 3. Svelte/store
 Sometimes, we need have a global-scoped variable, that can access through everything, and its value get updated everywhere, as well as be able to trigger re-rendering when its value changes. In svelte, we have a svelte/store to help us, there are readable, writable and derived stores, their names are self-explantory that some might only allow read-only or also allow re-write. In my case, I used writable store to monitor whether a DOM is mounted or not, and hence determined whether should continue animating.
