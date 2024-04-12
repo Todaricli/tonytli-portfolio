@@ -5,6 +5,8 @@ import { writable} from "svelte/store";
  */
 export const globalDataLoadingDuration = writable(Math.floor(Math.random()* (2000 - 1200 +1) + 1200))
 
+globalDataLoadingDuration.subscribe((globalDataLoadingDuration) => console.log(globalDataLoadingDuration))
+
 /**Global variable, shared among all routes to control actual page display or loading animation required */
 export let mounted = writable(false)
 
