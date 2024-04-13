@@ -17,7 +17,7 @@
 				<p>{singleExperience.job_title}</p>
 			</div>
 			<div class="tablet:pt-4 laptop:text-center">
-				<p>Tenure: {singleExperience.tenure} Years</p>
+				<p>Tenure: {singleExperience.tenure} Months</p>
 				<p>From {singleExperience.start} to {singleExperience.end}</p>
 			</div>
 			<div class="tablet:pt-4">

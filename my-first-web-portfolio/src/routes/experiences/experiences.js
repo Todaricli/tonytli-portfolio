@@ -1,126 +1,119 @@
 export const jobExperiences = [
     {
-        job_title: "Graphic Designer",
+        job_title: "Graduate Teaching Assistant",
+        tenure: 3,
+        start: "02/2024",
+        end: "current",
+        desc: `<p>Due to my achievement of good grades and demonstrated leadership 
+        abilities as a Class Representative, I was given the opportunity to serve as 
+        a Graduate Teaching Assistant for one of the postgraduate papers, 
+        Programming with Web Tech. In this role, I tutor students in developing 
+        skills essential for front-end and back-end web development. The main 
+        technologies involved are: </p> <br>
+        <ul class="list-disc pl-5">
+        <li>Front-end: HTML5, CSS</li>
+        <li>Back-end: Node.js, Express.js, SQL </li>
+        <li>Hybrid: Handlebars, AJAX, JSON, Vanilla JS </li>
+        <li>Version Control: Git, GitHub </li>
+        </ul>
+        `,
+        image: ".././company_icon/uoa.png",
+        company: "University of Auckland",
+        address: "Auckland CBD, Auckland, New Zealand"
+    },
+    {
+        job_title: "Retail Assistant",
         tenure: 5,
-        start: 2010,
-        end: 2015,
-        desc: `<p>During my five-year tenure as a Graphic Designer at Apple, I had the privilege of contributing to one of the most iconic and innovative companies in the world. My role was dynamic and multifaceted, encompassing a wide range of responsibilities that allowed me to immerse myself in the realm of visual communication and design innovation. From crafting captivating marketing materials to designing user interfaces for cutting-edge digital products, every project presented an opportunity to push the boundaries of creativity and elevate the Apple brand.</p><br>
-        <p>One of the key aspects of my role was ensuring that every design I created aligned seamlessly with Apple's brand identity and values. This required a deep understanding of Apple's design principles, typography, color palettes, and overall aesthetic. Whether I was working on a product packaging design or a digital advertisement, I approached each project with meticulous attention to detail, striving to create designs that not only looked visually stunning but also resonated with Apple's audience on an emotional level.</p><br>
-        <p>Collaboration was at the heart of my work at Apple. I had the privilege of collaborating with talented cross-functional teams, including product designers, marketers, engineers, and executives. This collaborative approach fostered an environment of innovation and creativity, allowing us to bring bold and innovative ideas to life. Whether we were brainstorming concepts for a new product launch or refining the user experience of a digital platform, each collaboration was an opportunity to learn from others and push the boundaries of what was possible.</p><br>
-        <p>Over the course of my tenure, I had the opportunity to work on a diverse range of projects that showcased the versatility of my skills as a graphic designer. I played a key role in developing marketing campaigns for flagship products such as the iPhone and iPad, designing eye-catching visuals that captured the essence of each product and resonated with consumers around the world. Additionally, I contributed to the design of retail displays and signage, creating immersive experiences that brought the Apple brand to life in physical spaces.</p><br>
-        <p>One of the highlights of my time at Apple was the opportunity to work on the design of user interfaces for digital platforms such as iOS and macOS. This presented a unique set of challenges and opportunities, as I had to balance aesthetic considerations with usability and functionality. I collaborated closely with product designers and engineers to create intuitive and user-friendly interfaces that seamlessly integrated with Apple's hardware products, providing users with an unparalleled experience.</p><br>
-        <p>Throughout my tenure at Apple, I was continuously inspired by the company's commitment to excellence and innovation. Every project challenged me to think creatively and push the boundaries of design, and I am grateful for the opportunity to have contributed to the legacy of one of the most iconic brands in the world. My time at Apple has not only shaped me as a designer but has also instilled in me a passion for creativity, collaboration, and innovation that I carry with me in all aspects of my work.</p>`,
-        image: ".././company_icon/apple.png",
-        company: "Apple",
-        address: "New york, USA"
+        start: "11/2023",
+        end: "current",
+        desc: `<p>This experience may seem unrelated to my technical background, but 
+        working as a retail assistant at Michael Hill has been incredibly valuable. </p><br>
+        <p>Despite previously serving as an investment product advisor, I later 
+        realized a gap in my skills pertaining to customer engagement and 
+        communication, particularly in a Western setting, possibly due to cultural 
+        differences. </p><br>
+        <p> Consequently, I encountered challenges in expressing my 
+        ideas and showcasing my true capability, hindering my ability to be an 
+        engaging coworker during my other tenures or Uni life. </p><br>
+        <p>However, my time 
+        as a retail assistant provided me with invaluable insights. I gained a 
+        deeper understanding of effective customer interaction, tailored to the 
+        preferences of New Zealanders. </p><br>
+        <p> Moreover, I honed my teamwork skills in 
+        the fast-paced retail environment, learned to cultivate customer loyalty, 
+        and even delved into the art of storytelling in the context of luxury 
+        jewelry.</p>`,
+        image: ".././company_icon/michaelhill.png",
+        company: "Michael hill",
+        address: "Sylvia park, Auckland, New Zealand"
     },
     {
-        job_title: "Software Engineer",
-        tenure: 4,
-        start: 2016,
-        end: 2020,
-        desc: `<p>As a Software Engineer at Google, I was immersed in a dynamic environment where innovation was not just encouraged but expected. My four-year tenure was marked by exciting challenges and opportunities to contribute to some of Google's most impactful projects. From developing algorithms that power search engine capabilities to optimizing backend systems for maximum efficiency, my role allowed me to make meaningful contributions to the technological landscape.</p><br>
-        <p>One of the most rewarding aspects of my job was the opportunity to collaborate with some of the brightest minds in the industry. Whether it was participating in brainstorming sessions with cross-functional teams or pairing programming with fellow engineers, I found that Google fostered a culture of collaboration and knowledge sharing that fueled innovation. Together, we tackled complex problems and developed elegant solutions that pushed the boundaries of what was possible.</p><br>
-        <p>During my time at Google, I had the opportunity to work on a diverse range of projects spanning various domains. From machine learning initiatives aimed at improving user experience to developing robust infrastructure for cloud computing services, each project presented unique challenges and learning opportunities. I particularly enjoyed the fast-paced nature of the work, where I was constantly challenged to think creatively and adapt to emerging technologies.</p><br>
-        <p>One project that stands out in my memory is the development of a real-time collaboration tool that revolutionized the way teams work together remotely. From conceptualization to implementation, I played a key role in architecting the system and ensuring its seamless integration with existing Google Suite products. The project not only showcased my technical skills but also allowed me to make a tangible impact on how teams collaborate in the digital age.</p><br>
-        <p>Another highlight of my time at Google was the emphasis on personal and professional growth. Whether it was attending internal workshops on emerging technologies or pursuing advanced certifications in cloud computing, Google provided ample opportunities for continuous learning and development. I found myself constantly challenged to expand my skill set and explore new areas of interest, which ultimately contributed to my growth as an engineer.</p><br>
-        <p>Overall, my experience at Google was incredibly rewarding, both personally and professionally. I am grateful for the opportunity to have worked alongside some of the brightest minds in technology and to have contributed to projects that have a meaningful impact on users worldwide. Google's commitment to innovation and collaboration has left a lasting impression on me, and I look forward to carrying the lessons I've learned into future endeavors.</p>`,
-        image: ".././company_icon/google.png",
-        company: "Google",
-        address: "Mountain View, California, USA"
+        job_title: "Research Assistant",
+        tenure: 13,
+        start: "11/2021",
+        end: "02/2023",
+        desc: `<p>Appointed by my lecturer for data entry whenever there is a research 
+        project.</p> <br>
+        <ul class="list-disc pl-5">
+        <li>Data collection, allocation and storage</li>
+        <li>Documents collection and allocation </li>
+        <li>Highlighting and organizing relevant sources of data </li>
+        </ul>`,
+        image: ".././company_icon/aut.png",
+        company: "Auckland University of Technology",
+        address: "Auckland CBD, Auckland, New Zealand"
     },
     {
-        job_title: "Aerospace Engineer",
-        tenure: 6,
-        start: 2014,
-        end: 2020,
-        desc: `<p>My journey as an Aerospace Engineer at SpaceX was nothing short of exhilarating. Over the course of six years, I had the privilege of being part of a team that redefined what is possible in space exploration. From designing next-generation rocket engines to developing spacecraft capable of traveling to Mars, every day presented new challenges and opportunities to push the boundaries of aerospace engineering.</p><br>
-        <p>One of the defining aspects of my role at SpaceX was the fast-paced and dynamic nature of the work environment. Unlike traditional aerospace companies, SpaceX operated with a sense of urgency and ambition that permeated every aspect of the organization. Whether it was working long hours to meet tight deadlines or innovating on the fly to solve unexpected challenges, I found myself constantly engaged and motivated by the mission at hand.</p><br>
-        <p>Collaboration was at the heart of everything we did at SpaceX. I had the privilege of working alongside some of the brightest engineers, scientists, and technicians in the industry, each bringing their unique expertise to the table. Together, we tackled some of the most complex engineering problems imaginable, from reusability of rocket components to designing systems capable of sustaining human life in space.</p><br>
-        <p>One of the most memorable projects I worked on during my time at SpaceX was the development of the Falcon Heavy rocket, the most powerful operational rocket in the world. From initial concept to successful launch, I was involved in every stage of the rocket's development, from designing structural components to conducting rigorous testing to ensure reliability and safety. The sense of pride and accomplishment upon witnessing the successful maiden flight of the Falcon Heavy is something I will never forget.</p><br>
-        <p>Throughout my tenure at SpaceX, I was continuously inspired by the company's bold vision for the future of space exploration. Elon Musk's relentless pursuit of innovation and his unwavering commitment to making humanity a multiplanetary species served as a constant source of motivation for me and my colleagues. I am proud to have been part of a team that is pushing the boundaries of what is possible and charting a course towards a future among the stars.</p><br>
-        <p>Leaving SpaceX was a bittersweet moment for me, but I am grateful for the experiences and friendships I gained during my time there. The lessons I learned and the memories I made will stay with me forever, and I am excited to carry the spirit of exploration and innovation into the next phase of my career.</p>`,
-        image: ".././company_icon/spaceX.png",
-        company: "SpaceX",
-        address: "Hawthorne, California, USA"
+        job_title: "Intern (Corporate Banking)",
+        tenure: 3,
+        start: "06/2022",
+        end: "08/2022",
+        desc: `<p>Short-term internship program offered by CCB, where I joined the 
+        Corporate Banking team and actively engaged in the following activities: </p> <br>
+        <ul class="list-disc pl-5">
+        <li>Collecting and analyzing the latest M&A activities and its trend in New 
+        Zealand in order to discover potential opportunities. </li>
+        <li>Preparing and outlining assigned industry research report  </li>
+        <li>Assisting supervisors and seniors with AML screening and Credit Annual 
+        review  </li>
+        <li>Data entry</li>
+        </ul>`,
+        image: ".././company_icon/ccb.png",
+        company: "Auckland University of Technology",
+        address: "Auckland CBD, Auckland, New Zealand"
     },
     {
-        job_title: "Marketing Manager",
-        tenure: 7,
-        start: 2013,
-        end: 2020,
-        desc: `<p>During my seven-year tenure as a Marketing Manager at Amazon, I had the opportunity to be part of one of the world's most innovative and customer-centric companies. My role was diverse and challenging, encompassing a wide range of responsibilities that allowed me to make a meaningful impact on Amazon's brand and business growth. From developing comprehensive marketing strategies to launching high-impact campaigns, I thrived in the fast-paced and dynamic environment that Amazon is known for.</p><br>
-        <p>One of the key aspects of my role was driving brand awareness and customer engagement through strategic marketing initiatives. Whether it was leveraging data analytics to identify target audiences or collaborating with creative teams to develop compelling content, I was constantly seeking innovative ways to connect with customers and enhance their shopping experience on Amazon's platform.</p><br>
-        <p>Collaboration was instrumental to the success of our marketing efforts at Amazon. I had the privilege of working with cross-functional teams comprising product managers, designers, engineers, and analysts, each bringing their unique perspectives and expertise to the table. Together, we developed and executed marketing campaigns that resonated with customers and drove measurable business results.</p><br>
-        <p>One of the highlights of my time at Amazon was the opportunity to launch and scale new products and services. Whether it was introducing innovative features to Amazon Prime or expanding into new geographic markets, I played a pivotal role in shaping the customer experience and driving adoption of Amazon's offerings. The fast-paced and entrepreneurial nature of the work fueled my passion for innovation and creativity.</p><br>
-        <p>Throughout my tenure, I was continuously inspired by Amazon's customer-centric culture and relentless focus on long-term thinking. Jeff Bezos's vision of building the Earth's most customer-centric company served as a guiding principle in everything we did, from product development to marketing strategy. I am proud to have been part of a company that is revolutionizing the way people shop and consume goods, and I am excited to carry the lessons I've learned into future endeavors.</p><br>
-        <p>Leaving Amazon was a difficult decision, but I am grateful for the experiences and relationships I gained during my time there. The lessons I learned and the memories I made will continue to influence my approach to marketing and business strategy, and I am excited to apply them to new challenges and opportunities in the future.</p>`,
-        image: ".././company_icon/amazon.png",
-        company: "Amazon",
-        address: "Seattle, Washington, USA"
+        job_title: "Investment Product Advisor",
+        tenure: 15,
+        start: "02/2020",
+        end: "06/2021",
+        desc: `<p>Due to the Covid outbreak and subsequent border restrictions in New 
+        Zealand, I had to pause my studies and found an internship in my 
+        hometown of Nanning, China, at YingLing Asset, a small-sized asset 
+        management company initially managing around 50 million RMB in assets 
+        under management (AUM). </p><br>
+        <p> I started as an Investment Analyst Intern and 
+        later, due to the company's expansion needs, its funds outperformed 
+        benchmarks and my exemplary performance during the internship, I was 
+        appointed by the CEO to be an Investment Product Advisor (a sales role in 
+        asset management). </p><br>
+        <p>Ultimately, I helped drive the company's AUM up by 
+        50 million RMB (equivalent to 11 million NZD based on the 10-year average 
+        NZD/RMB exchange rate). By the time I left the company, the AUM reached 
+        220 million RMB. The tasks I performed in this role are summarized below: </p><br>
+        <ul class="list-disc pl-5">
+        <li>Responsible for creating and editing private fund products quarterly 
+        and annual performance reports. </li>
+        <li>Discover potential new clients, promote cooperation and make them 
+        become official clients. Maintaining a good relationship with existing 
+        clients, enquiry solving and supporting funds contract Signing 
+        procedure </li>
+        <li>Responsible for creating and editing fund product 
+        presentations and disclosure statements, and conducting periodical 
+        Roadshow presentations.  </li>
+        </ul>`,
+        image: ".././company_icon/yinling.png",
+        company: "YinLing Asset Management Ltd",
+        address: "Nanning, Guangxi, China"
     },
-    {
-        job_title: "Product Manager",
-        tenure: 5,
-        start: 2015,
-        end: 2020,
-        desc: `<p>As a Product Manager at Facebook, I had the privilege of being part of a company that is redefining the way people connect and communicate in the digital age. Over the course of five years, I played a key role in shaping the direction of products that are used by billions of people around the world, from Facebook's flagship app to emerging platforms and technologies.</p><br>
-        <p>One of the most exciting aspects of my role was the opportunity to work on cutting-edge products and features that are shaping the future of social media. Whether it was launching new tools for content creators or enhancing privacy and security features, I was constantly challenged to think innovatively and prioritize the needs of Facebook's diverse user base.</p><br>
-        <p>Collaboration was fundamental to the success of our product development efforts at Facebook. I had the privilege of working with cross-functional teams comprising engineers, designers, data scientists, and researchers, each bringing their unique perspectives and expertise to the table. Together, we tackled complex problems and developed solutions that pushed the boundaries of what was possible.</p><br>
-        <p>One of the highlights of my time at Facebook was the opportunity to lead the development of a new messaging platform that revolutionized the way people communicate online. From conceptualization to launch, I worked closely with engineering and design teams to create an intuitive and user-friendly interface that prioritized privacy and personalization. The positive feedback from users was incredibly rewarding and reaffirmed the impact of our work.</p><br>
-        <p>Throughout my tenure, I was continuously inspired by Facebook's mission to bring the world closer together and build communities that are inclusive and empowering. Mark Zuckerberg's vision of a more connected and informed world guided our product development efforts and served as a constant reminder of the importance of our work. I am proud to have been part of a company that is driving positive social change through technology, and I am excited to carry the lessons I've learned into future endeavors.</p><br>
-        <p>Leaving Facebook was a difficult decision, but I am grateful for the experiences and relationships I gained during my time there. The lessons I learned and the memories I made will continue to influence my approach to product management, and I am excited to apply them to new challenges and opportunities in the future.</p>`,
-        image: ".././company_icon/Facebook.png",
-        company: "Facebook",
-        address: "Menlo Park, California, USA"
-    },
-    {
-        job_title: "Software Engineer",
-        tenure: 6,
-        start: 2013,
-        end: 2019,
-        desc: `<p>During my six-year tenure as a Software Engineer at Tencent, I had the opportunity to work on some of the most innovative projects in the tech industry. From developing cutting-edge gaming platforms to creating scalable solutions for cloud computing, every day presented new challenges and opportunities to push the boundaries of technology.</p><br>
-        <p>One of the most rewarding aspects of my role was the opportunity to work on projects that had a direct impact on millions of users around the world. Whether it was optimizing algorithms for faster processing speeds or enhancing user interfaces for improved usability, I found fulfillment in knowing that my work was making a difference in people's lives.</p><br>
-        <p>Collaboration was central to the success of our projects at Tencent. I had the privilege of working with cross-functional teams comprising engineers, designers, product managers, and researchers, each bringing their unique perspectives and expertise to the table. Together, we tackled complex problems and developed solutions that pushed the boundaries of what was possible.</p><br>
-        <p>One of the highlights of my time at Tencent was the opportunity to work on the development of a new social networking platform that revolutionized the way people connect and communicate online. From conceptualization to launch, I played a key role in architecting the system and ensuring its scalability and reliability. The positive feedback from users was incredibly rewarding and reaffirmed the impact of our work.</p><br>
-        <p>Throughout my tenure, I was continuously inspired by Tencent's commitment to innovation and excellence. Pony Ma's vision of building a connected ecosystem of products and services guided our work and served as a constant reminder of the importance of pushing the boundaries of technology. I am proud to have been part of a company that is shaping the future of the digital landscape, and I am excited to carry the lessons I've learned into future endeavors.</p><br>
-        <p>Leaving Tencent was a bittersweet moment for me, but I am grateful for the experiences and relationships I gained during my time there. The lessons I learned and the memories I made will continue to influence my approach to software engineering, and I am excited to apply them to new challenges and opportunities in the future.</p>`,
-        image: ".././company_icon/tencent.png",
-        company: "Tencent",
-        address: "Shenzhen, China"
-    }
 ];
-
-
-
-
-function generateJobExperiences() {
-    const companies = [
-        { name: "Google", logo: ".././company_icon/google.png" },
-        { name: "Apple", logo: ".././company_icon/apple.png" },
-        { name: "SpaceX", logo: ".././company_icon/spaceX.png" },
-        { name: "Amazon", logo: ".././company_icon/amazon.png" },
-        { name: "Facebook", logo: ".././company_icon/Facebook.png" },
-        { name: "Tencent", logo: ".././company_icon/tencent.png" }
-    ];
-
-    const jobTitles = ["Web Developer", "Software Engineer", "Graphic Designer", "Marketing Manager", "Data Analyst"];
-    const addresses = ["New York, USA", "London, UK", "Tokyo, Japan", "Sydney, Australia", "Berlin, Germany"];
-    const descriptions = ["Led a team of developers in building modern web applications.", "Managed marketing campaigns and analyzed their effectiveness.", "Designed visually appealing graphics for various projects.", "Analyzed large datasets to extract meaningful insights.", "Developed software solutions to meet specific business needs."];
-
-    for (let i = 0; i < 10; i++) {
-        const company = companies[Math.floor(Math.random() * companies.length)];
-
-        const jobExperience = {
-            job_title: jobTitles[Math.floor(Math.random() * jobTitles.length)],
-            tenure: Math.floor(Math.random() * 10) + 1,
-            desc: descriptions[Math.floor(Math.random() * descriptions.length)],
-            image: company.logo,
-            company: company.name,
-            address: addresses[Math.floor(Math.random() * addresses.length)]
-        };
-        jobExperiences.push(jobExperience);
-    }
-}
-
-// generateJobExperiences();

@@ -33,17 +33,18 @@
 		</div>
 	</div>
 	<div class="text-sm text-white col-span-3">
-		<h1 class="about-desc-title pb-4 text-3xl">ABOUT ME</h1>
+		<h1 class="about-desc-title pb-4 text-3xl">Summary</h1>
 		<div class="main-text-div text-sm">
-			<p>Allow me to introduce myself: I'm John Smith, a developer with a passion for crafting innovative solutions that make an impact. Over the years, I've had the privilege of working on a multitude of projects for some of the biggest names in the tech industry.
-
-				From my early days diving into coding to my current role as a seasoned developer, I've always been drawn to the challenge of pushing the boundaries of what's possible. <br><br> Each project I've been a part of has been a learning experience, fueling my drive to continually improve and innovate.
-				
-				My journey has taken me from Silicon Valley giants to dynamic startups, where I've had the opportunity to collaborate with talented teams and contribute to cutting-edge technologies.<br><br> Whether it's developing robust systems, optimizing algorithms, or troubleshooting complex issues, I thrive on the excitement of solving problems and delivering top-notch solutions.
-				
-				But beyond the code, what truly sets me apart is my ability to connect with others and foster a collaborative environment. I believe that great things happen when diverse minds come together, and I'm committed to building relationships and driving projects forward through open communication and shared goals.
-				
-				As I look ahead to the future, I'm excited to continue my journey in the ever-evolving world of tech, leveraging my skills and experience to create something incredible, together.</p>
+			<p>Highly motivated and detail-oriented graduate of Bachelor of Business 
+				from Auckland University of Technology, currently pursuing a Master's in 
+				Information Technology at the University of Auckland. Seeking 
+				opportunities in IT fields to apply my knowledge and skills gained from 
+				my studies. I am diligent and proactive, I thrive on learning new skills and 
+				collaborating with co-workers and clients. Possess a strong decision
+				making ability and continuously seek innovative solutions to overcome 
+				challenges. With a proactive working attitude, I am committed to creating 
+				value for organizations. Eager to contribute my analytical mindset and 
+				problem-solving abilities to achieve success in the industry. </p>
 		</div>
 	</div>
 </div>
