@@ -2,7 +2,7 @@
     import { mounted } from "../store/store";
 </script>
 
-<div class="contact-main-container flex flex-col justify-center items-center desktop:min-h-fit" class:hide={!$mounted}>
+<div class="contact-main-container flex flex-col justify-center items-center desktop:min-h-fit pb-12" class:hide={!$mounted}>
 	<div class="contact-page-title-div px-24 pt-12 tablet:py-16 laptop:py-24">
 		<h2 class="contact-page-title text-3xl laptop:text-8xl tablet:text-6xl text-white opacity-75 desktop:text-9xl desktop:px-14">Let's start on something incredible together</h2>
 	</div>
