@@ -9,7 +9,7 @@
 	$mounted = false;
 	const loadingMessage = 'Projects.';
 	let timer;
-	
+
 	onMount(() => {
 		timer = setTimeout(() => {
 			$mounted = true;
@@ -30,12 +30,10 @@
 			class="project-main-desc w-[460px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24 desktop:pb-32"
 		>
 			<p>
-				During my tenure at various prestigious companies like Apple, Google, SpaceX, Amazon,
-				Facebook, and Tencent, I engaged in diverse projects that showcased my expertise. From
-				developing e-commerce websites and social media platforms to crafting online learning
-				platforms and event management systems, each project spanned several months and utilized
-				cutting-edge technologies such as HTML, CSS, JavaScript, React, Vue.js, Angular, Node.js,
-				Express, and MongoDB.
+				During my academic journey, I've undertaken some projects, including a blogging web app for
+				a course assignment at UOA and my personal web portfolio. These endeavors allowed me to
+				demonstrate proficiency in modern technologies such as HTML, CSS, JavaScript, Svelte,
+				Node.js, Express, and SQL.
 			</p>
 		</div>
 		<h1
@@ -43,10 +41,14 @@
 		>
 			MY PROJECTS
 		</h1>
-		<div class="w-full hidden laptop:flex flex-row justify-center items-center laptop:pt-36 desktop:pt-48 text-white text-2xl animate-bounce opacity-50"><i class="fa-solid fa-chevron-down"></i></div>
+		<div
+			class="w-full hidden laptop:flex flex-row justify-center items-center laptop:pt-36 desktop:pt-48 text-white text-2xl animate-bounce opacity-50"
+		>
+			<i class="fa-solid fa-chevron-down"></i>
+		</div>
 	</div>
 	<div
-		class="project-flex-container pt-12 mx-16 flex flex-col items-center justify-center gap-5 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:grid-cols-3 laptop:mx-24 desktop:mx-36"
+		class="project-flex-container pt-12 mx-16 flex flex-col items-center justify-center gap-5 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:px-24 desktop:px-64"
 	>
 		{#if data.projects && data.projects.length > 0}
 			{#each data.projects as project (project.slug)}

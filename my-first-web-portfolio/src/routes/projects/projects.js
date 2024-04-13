@@ -5,7 +5,9 @@ export const projects = [
         duration: "3 weeks",
         company: "Course Assignment at UOA",
         image: ".././project_icon/blog.png",
-        technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "SQL", "UUID", "AJAX", "API", "Handlebars", "ER-diagram", "Github"],
+        github: "https://github.com/Todaricli/Blogging-system",
+        website: "https://full-stack-blog-f6yb.onrender.com/",
+        technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "SQL", "AJAX", "API", "Handlebars"],
         desc: `<p>Served as the Team Lead, 
         responsible for delegating workload following Agile methodologies and 
         utilizing Kanban-style task 
@@ -27,6 +29,8 @@ export const projects = [
         duration: "2 weeks",
         company: "Personal development",
         image: ".././project_icon/portfolio.png",
+        github: "https://github.com/Todaricli/tonytli-portfolio",
+        website: "..",
         technologies: ["HTML", "CSS", "JavaScript", "Svelte", "SvelteKit", "Tailwind CSS"],
         desc: `<p>Take a look at my portfolio website, crafted with Svelte and Tailwind CSS. Its modular input data structure allows for seamless updates, ensuring that it effectively showcases my evolving skills and projects. Feel free to explore and see the work I've been doing!</p>
         `
