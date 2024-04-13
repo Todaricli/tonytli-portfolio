@@ -1,19 +1,21 @@
 <script>
-    import { mounted } from "../store/store";
+	import { mounted } from '../store/store';
 </script>
 
-<div id="about" class:hide={!$mounted}
-	class="flex flex-col items-center tablet:grid tablet:grid-cols-6 tablet:items-start px-12 tablet:px-16 laptop:px-56 pt-24 laptop:h-screen"
+<div
+	id="about"
+	class:hide={!$mounted}
+	class="flex flex-col items-center gap-4 tablet:grid tablet:grid-cols-6 px-12 tablet:px-16 laptop:px-56 pt-24 laptop:h-screen"
 >
-	<div class="flex flex-col justify-center items-center col-span-2 mr-6">
-		<div class="bg-gray-100 rounded-3xl flex flex-col justify-center items-center p-2">
-			<img class="w-full h-full" src="/about_icon/john.png" alt="john smith"/>
+	<div class="flex flex-col justify-start items-center col-span-2 h-full">
+		<div class="bg-gray-100 rounded-3xl tablet:max-h-96 flex flex-col justify-center items-center p-2 overflow-hidden h-full">
+			<img class="w-full rounded-3xl tablet:max-h-96" src="/about_icon/tony.jpg" alt="tony li" />
 		</div>
 		<div
-			class="key-info-div w-full text-xl flex flex-col pt-6 pl-6 items-start gap-5 tablet:gap-0 text-gray-200 tablet:text-gray-200 opacity-100 pb-10 tracking-widest"
+			class="key-info-div text-xl flex flex-col pt-6 pl-6 items-start gap-5 tablet:gap-0 text-gray-200 tablet:text-gray-200 opacity-100 pb-10 tracking-widest"
 		>
 			<div>
-				<h1>JOHN SMITH</h1>
+				<h1>TONY TUOCHENG Li</h1>
 			</div>
 			<div class="tablet:pt-4">
 				<div class="flex flex-col tablet:pt-0 justify-center items-start gap-2">
@@ -22,29 +24,40 @@
 						><a href="mailto:leetony347@yahoo.com">leetony347@yahoo.com</a></span
 					>
 					<span class="text-sm other-contact-link hover:translate-x-4"
-						><a href="https://github.com/Todaricli">Github</a></span
+						><a href="https://github.com/Todaricli" target="_blank">Github</a></span
 					>
 					<span class="text-sm other-contact-link hover:translate-x-4"
-						><a href="https://www.linkedin.com/in/tuocheng-li-b86b59231/">Linkedin</a
+						><a href="https://www.linkedin.com/in/tuocheng-li-b86b59231/" target="_blank"
+							>Linkedin</a
 						></span
 					>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="text-sm text-white col-span-3">
+	<div class="text-sm text-white col-span-2 flex flex-col items-start h-full">
 		<h1 class="about-desc-title pb-4 text-3xl">Summary</h1>
 		<div class="main-text-div text-sm">
-			<p>Highly motivated and detail-oriented graduate of Bachelor of Business 
-				from Auckland University of Technology, currently pursuing a Master's in 
-				Information Technology at the University of Auckland. Seeking 
-				opportunities in IT fields to apply my knowledge and skills gained from 
-				my studies. I am diligent and proactive, I thrive on learning new skills and 
-				collaborating with co-workers and clients. Possess a strong decision
-				making ability and continuously seek innovative solutions to overcome 
-				challenges. With a proactive working attitude, I am committed to creating 
-				value for organizations. Eager to contribute my analytical mindset and 
-				problem-solving abilities to achieve success in the industry. </p>
+			<p>
+				Highly motivated and detail-oriented graduate of Bachelor of Business from Auckland
+				University of Technology, currently pursuing a Master's in Information Technology at the
+				University of Auckland. Seeking opportunities in IT fields to apply my knowledge and skills
+				gained from my studies.
+			</p>
+			<br>
+			<p>
+				I am diligent and proactive, I thrive on learning new skills and
+				collaborating with co-workers and clients. Possess a strong decision making ability and
+				continuously seek innovative solutions to overcome challenges. With a proactive working
+				attitude, I am committed to creating value for organizations. Eager to contribute my
+				analytical mindset and problem-solving abilities to achieve success in the industry.
+			</p>
+			<br>
+			<p>
+				In my spare time, I enjoy hiking and taking leisurely walks. There's something serene about
+				immersing myself in nature, breathing in the fresh air, and feeling the earth beneath my
+				feet. It's a peaceful escape from the hustle and bustle of daily life.
+			</p>
 		</div>
 	</div>
 </div>
@@ -66,10 +79,10 @@
 		flex-direction: column;
 		justify-content: end;
 	}
-	#about, span {
+	#about,
+	span {
 		transition-property: padding, transform;
 		transition-duration: 1s;
-        animation: page-effect 1000ms forwards linear;
-    }
-
+		animation: page-effect 1000ms forwards linear;
+	}
 </style>
