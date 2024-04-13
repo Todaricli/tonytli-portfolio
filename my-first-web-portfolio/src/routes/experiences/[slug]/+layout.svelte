@@ -37,11 +37,11 @@
 
 <svelte:window on:resize={expandExperienceNavlinks} bind:innerWidth={ScreenWidth} />
 
-<div class="experience-main-container w-full h-full flex flex-col justify-center items-center p-8">
+<div class="experience-main-container w-full flex flex-col justify-start items-center px-8 pt-24 pb-24">
 	<div
 		class="pt-12 flex flex-col justify-center items-center tablet:items-start tablet:w-5/6 tablet:grid tablet:grid-cols-6 gap-4"
 	>
-		<main class="col-span-4 experience-main-content-container" class:shade-background={clickToDrop}>
+		<main class="col-span-4 experience-main-content-container h-screen" class:shade-background={clickToDrop}>
 			<slot />
 		</main>
 		<aside class="hidden tablet:flex col-span-2 w-5/6 tablet:w-auto">
