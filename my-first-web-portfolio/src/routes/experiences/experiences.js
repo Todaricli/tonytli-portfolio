@@ -79,7 +79,7 @@ export const jobExperiences = [
         <li>Data entry</li>
         </ul>`,
         image: ".././company_icon/ccb.png",
-        company: "Auckland University of Technology",
+        company: "China Construction Bank",
         address: "Auckland CBD, Auckland, New Zealand"
     },
     {
