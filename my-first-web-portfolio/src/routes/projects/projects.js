@@ -23,9 +23,9 @@ export const projects = [
     },
     {
         slug: "project2",
-        name: "Social Media Platform Development",
-        duration: "8 months",
-        company: "Google",
+        name: "Web Portfolio",
+        duration: "2 weeks",
+        company: "Personal development",
         image: ".././project_icon/portfolio.png",
         technologies: ["HTML", "CSS", "JavaScript", "Svelte", "SvelteKit", "Tailwind CSS"],
         desc: `<p>Take a look at my portfolio website, crafted with Svelte and Tailwind CSS. Its modular input data structure allows for seamless updates, ensuring that it effectively showcases my evolving skills and projects. Feel free to explore and see the work I've been doing!</p>

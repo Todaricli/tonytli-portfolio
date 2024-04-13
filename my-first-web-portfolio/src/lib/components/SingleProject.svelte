@@ -25,12 +25,12 @@
 		</div>
 
 		<div
-			class="flip-box-back p-4 w-full min-h-96 h-fit rounded-3xl absolute flex flex-col justify-start items-start text-white"
+			class="flip-box-back p-4 w-full min-h-96 rounded-3xl absolute flex flex-col justify-start items-start text-white"
 		>
 			<div class="flip-box-back-key-info px-2 tracking-wider">
 				<h2>{project.name}</h2>
 				<h2>Duration: {project.duration}</h2>
-				<h2>Company: {project.company}</h2>
+				<h2>Client: {project.company}</h2>
 			</div>
 			<div class="flex flex-col items-center w-full pt-6 tablet:pt-0 text-sky-100">
 				<div class="grid grid-cols-3 gap-2 py-2">
