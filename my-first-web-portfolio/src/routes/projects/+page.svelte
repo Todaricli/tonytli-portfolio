@@ -48,7 +48,7 @@
 		</div>
 	</div>
 	<div
-		class="project-flex-container pt-12 mx-16 flex flex-col items-center justify-center gap-5 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:px-24 desktop:px-64"
+		class="project-flex-container pt-12 mx-16 flex flex-col items-center justify-center gap-5 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:px-36 desktop:grid-cols-3 desktop:px-64"
 	>
 		{#if data.projects && data.projects.length > 0}
 			{#each data.projects as project (project.slug)}

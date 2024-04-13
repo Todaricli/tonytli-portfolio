@@ -11,13 +11,13 @@
 	class="flip-box w-full rounded-3xl pb-2"
 >
 	<div
-		class="flip-box-inner p-4 w-full min-h-96 desktop:h-[460px] flex flex-col rounded-3xl justify-center items-center relative bg-black shadow-[0px_5px_5px_5px_rgb(44,50,56)]"
+		class="flip-box-inner p-4 max-w-96 h-96 flex flex-col rounded-3xl items-center relative bg-black shadow-[0px_5px_5px_5px_rgb(44,50,56)]"
 		class:fliped={showCardBack}
 	>
 		<div class="flip-box-front w-full rounded-3xl absolute">
-			<div class="image-cont p-2.5 rounded-3xl">
+			<div class="image-cont h-96 p-2.5 rounded-3xl flex flex-col items-center">
 				<img
-					class="w-full p-2.5 opacity-50"
+					class="w-full max-w-96 p-2.5 opacity-50"
 					src={project.image}
 					alt={project.name}
 				/>
@@ -44,7 +44,7 @@
 		</div>
 
 		<div
-			class="flip-box-back p-4 w-full min-h-96 h-fit rounded-3xl absolute flex flex-col justify-start items-start text-white"
+			class="flip-box-back p-2 w-full min-h-96 rounded-3xl absolute flex flex-col justify-start items-start text-white overflow-hidden"
 		>
 			<div class="flip-box-back-key-info px-2 tracking-wider">
 				<h2>{project.name}</h2>
@@ -64,7 +64,7 @@
 					{/if}
 				</div>
 			</div>
-			<div class="flex flex-col px-2 justify-center items-center w-full pt-6 tablet:pt-2">
+			<div class="flex flex-col px-2 justify-center items-center w-full pt-6 tablet:pt-2 overflow-hidden">
 				<p class="text-xs">{@html project.desc}</p>
 			</div>
 		</div>
