@@ -26,9 +26,9 @@ export const projects = [
         name: "Social Media Platform Development",
         duration: "8 months",
         company: "Google",
-        image: ".././project_icon/project2.png",
+        image: ".././project_icon/portfolio.png",
         technologies: ["HTML", "CSS", "JavaScript", "Svelte", "SvelteKit", "Tailwind CSS"],
-        desc: `<p>At Google, I had the opportunity to contribute to the development of a cutting-edge social media platform aimed at connecting users through shared interests and experiences. Over the course of eight months, our team utilized a modern tech stack, including HTML, CSS, JavaScript, Vue.js, and Firebase, to create a feature-rich platform that prioritized user engagement and privacy.</p>
+        desc: `<p>Take a look at my portfolio website, crafted with Svelte and Tailwind CSS. Its modular input data structure allows for seamless updates, ensuring that it effectively showcases my evolving skills and projects. Feel free to explore and see the work I've been doing!</p>
         `
     }
 ];

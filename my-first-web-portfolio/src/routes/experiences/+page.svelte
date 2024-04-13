@@ -30,9 +30,8 @@
 			class="experience-main-desc w-[400px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24"
 		>
 			<p>
-				With a rich history spanning Apple, Google, SpaceX, and Tencent, I bring a wealth of
-				experience as a developer, analyst, and marketing director. From pioneering tech solutions
-				to crafting strategic marketing campaigns, my journey reflects a commitment to innovation,
+				With a rich history spanning Finance, Economic,and Information Technology, I bring a wealth of
+				experience as a developer, analyst and investment advisor. My journey reflects a commitment to innovation,
 				collaboration, and driving measurable impact in dynamic, global environments.
 			</p>
 		</div>
@@ -66,7 +65,7 @@
 					<div
 						class="flex flex-col justify-start items-start pl-2 pr-14 pd-5 text-slate-300 gap-4 font-serif text-xl"
 					>
-						<p class="pt-2 text-sm">Tenure: {singleExperience.tenure} Years</p>
+						<p class="pt-2 text-sm">Tenure: {singleExperience.tenure} Months</p>
 						<div class="experience-button-div p-2 pl-0">
 							<button class="hover:translate-x-10 hover:text-stone-600"
 								><a class="w-full h-full text-center" href="/experiences/{singleExperience.slug}"
