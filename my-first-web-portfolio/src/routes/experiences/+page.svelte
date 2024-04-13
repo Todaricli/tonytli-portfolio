@@ -52,12 +52,12 @@
 			class="experience-flex-container flex flex-col justify-center items-center tablet:grid tablet:grid-cols-2 gap-16 pt-12 pb-24"
 		>
 			{#each data.experiencesData as singleExperience}
-				<div class="rounded-3xl flex flex-col justify-start items-start w-full h-full">
+				<div class="experience-flex-card rounded-3xl flex flex-col justify-start items-start w-full">
 					<div
-						class="bg-gray-300 rounded-3xl w-full h-96 tablet:w-full tablet:h-full flex flex-col justify-center items-center"
+						class="bg-gray-300 rounded-3xl h-96 flex flex-col justify-center items-center"
 					>
 						<img
-							class="company-img w-auto h-96 tablet:w-96 tablet:h-full opacity-50"
+							class="company-img w-full max-w-96 opacity-50"
 							src={singleExperience.img}
 							alt={singleExperience.slug}
 						/>
@@ -90,7 +90,7 @@
 		transition-duration: 1000ms;
 	}
 
-	.company-img:hover {
+	.experience-flex-card:hover img {
 		animation: image-effect 1s forwards linear;
 	}
 	.experience-flex-container {
