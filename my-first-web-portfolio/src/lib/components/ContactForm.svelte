@@ -21,22 +21,22 @@
 							class="bg-transparent"
 							type="text"
 							name="name"
-							placeholder="John Smith"
+							placeholder="Tony Li"
 							autocomplete="on"
 						/>
 					</div>
 					<div class="flex flex-col form-col gap-4">
 						<label for="email">Email:</label>
-						<input required id="email" type="email" name="email" placeholder="john@Smith.com" autocomplete="on" />
+						<input required id="email" type="email" name="email" placeholder="leetony347@yahoo.com" autocomplete="on" />
 					</div>
-					<div class="flex flex-col form-col gap-4 items-start">
+					<div class="flex flex-col form-col gap-4 items-start w-full">
 						<label for="message">Message:</label>
 						<textarea
 							id="message"
-							class="h-32"
+							class="min-h-48"
 							type="text"
 							name="message"
-							placeholder="Hello john, I would like..."
+							placeholder="Hello Tony, I would like..."
 						></textarea>
 					</div>
 					<!-- add hidden Honeypot input to prevent spams -->
