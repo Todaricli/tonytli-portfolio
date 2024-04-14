@@ -76,7 +76,7 @@
 			class:dropdown={clickToDrop}
 		>
 			<h2 class="other-experience text-gray-400 text-2xl">OTHER EXPERIENCES</h2>
-			<div class="flex flex-col items-center mt-4 text-white">
+			<div class="flex flex-col text-xl items-center gap-4 mt-4 text-white">
 				<ul>
 					{#each data.experiencesData as singleExperience}
 						<li
