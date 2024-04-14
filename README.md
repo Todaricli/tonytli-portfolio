@@ -29,7 +29,6 @@ git clone https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Toda
 ### 2. Navigate to proper repository
 ```
 cd tonytli-portfolio
-cd my-first-web-portfolio
 ```
 ### 3. Install all the dependencies
 ```
