@@ -1,4 +1,6 @@
 # PORTFOLIO SNAPSHOT
+It is now hosted at https://tonytli.netlify.app/
+
 <img width="880" alt="image" src="https://github.com/Todaricli/tonytli-portfolio/assets/130806678/b1ecae68-fc03-4606-a8d3-c018b05b5b6e">
 
 # MOTIVATION:
