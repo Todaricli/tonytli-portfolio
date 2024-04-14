@@ -37,6 +37,11 @@ html {
     src: url(/fonts/Tourney.ttf);
 }
 
+@font-face {
+    font-family: Titillium;
+    src: url(/fonts/TitilliumWeb-Regular.ttf)
+}
+
 @keyframes image-effect {
     0% {
 

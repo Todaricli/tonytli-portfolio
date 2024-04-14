@@ -63,12 +63,12 @@
 		display: none;
 	}
 	.project-title {
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 		transition-property: margin, transform, padding;
 		transition-duration: 1000ms;
 	}
 	.project-main-desc {
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 		transition-property: margin, transform, padding, text-wrap, word-wrap;
 		transition-duration: 1000ms;
 	}

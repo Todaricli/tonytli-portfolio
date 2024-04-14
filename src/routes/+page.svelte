@@ -56,7 +56,7 @@
 		display: inline-block;
 		animation: slide 25s infinite linear;
 		padding-right: 10em;
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 	}
 
 	button {

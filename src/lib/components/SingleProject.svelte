@@ -102,7 +102,7 @@
 	.flip-box-back {
 		backface-visibility: hidden;
 		transform: rotateY(180deg);
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 	}
 	.image-cont {
 		height: 80%;

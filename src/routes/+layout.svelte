@@ -104,7 +104,7 @@
 		animation: dropdown-items-effect 1s forwards linear;
 		transition-property: transform, color;
 		transition-duration: 1s;
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 	}
 
 	.dropdown-menu {
@@ -121,7 +121,7 @@
 	.row-navlinks, .row-navlinks a {
 		transition-property: position, display, transform, color;
 		transition-duration: 1s;
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 	}
 	.slot-wrapper {
 		transition-property: opacity;

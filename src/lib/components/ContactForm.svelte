@@ -101,7 +101,7 @@
 	}
 
 	.contact-page-title {
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 		transition-property: font-size, padding, text-wrap;
 		transition-duration: 1s;
 	}

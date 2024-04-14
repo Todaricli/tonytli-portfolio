@@ -85,7 +85,7 @@
 		display: none;
 	}
 	.experience-title {
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 		transition-property: margin, transform, padding;
 		transition-duration: 1000ms;
 	}
@@ -101,7 +101,7 @@
 		transition-duration: 800ms;
 	}
 	.experience-main-desc {
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 		transition-property: margin, transform, padding;
 		transition-duration: 800ms;
 	}

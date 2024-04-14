@@ -109,7 +109,7 @@
 	}
 	.experience-link {
 		transition: transform 1000ms;
-		font-family: DMSans, Arial, Helvetica, sans-serif;
+		font-family: Titillium, Arial, Helvetica, sans-serif;
 	}
 	.current-page-link {
 		border-bottom: 1px solid rgba(256, 256, 256, 0.2);
