@@ -27,7 +27,7 @@
 		class="project-main-desc-div pl-14 pb-12 flex flex-col items-start w-full tablet:pb-16 laptop:pb-24 pt-24 laptop:min-h-screen"
 	>
 		<div
-			class="project-main-desc w-[380px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24 desktop:pb-32"
+			class="project-main-desc tablet:w-[380px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24 desktop:pb-32"
 		>
 			<p>
 				During my academic journey, I've undertaken some projects, including a blogging web app for

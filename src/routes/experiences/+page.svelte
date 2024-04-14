@@ -27,7 +27,7 @@
 		class="experience-main-desc-div flex flex-col items-start w-full mb-12 laptop:mb-0 tablet:ml-6 pt-24 laptop:min-h-screen"
 	>
 		<div
-			class="experience-main-desc w-[400px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24"
+			class="experience-main-desc tablet:w-[400px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24"
 		>
 			<p>
 				With a rich history spanning Finance, Economic,and Information Technology, I bring a wealth of

@@ -56,10 +56,10 @@
 </div>
 
 <div
-	class="w-72 top-20 left-5 fixed dropdown-menu right-5 rounded-2xl overflow-hidden z-30 p-2 text-white hidden"
+	class="w-72 top-20 left-5 fixed dropdown-menu right-5 rounded-2xl overflow-hidden z-30 p-2 text-white hidden text-2xl"
 	class:showNav={clickToDrop}
 >
-	<nav class="flex flex-col justify-evenly items-center">
+	<nav class="flex flex-col justify-evenly items-center gap-5">
 		<a class="hover:translate-x-5 hover:text-stone-400" on:click={pageChangeThroughDropdownMenue} href="/">Home</a>
 		<a class="hover:translate-x-5 hover:text-stone-400" on:click={pageChangeThroughDropdownMenue} href="/experiences">Experiences</a>
 		<a class="hover:translate-x-5 hover:text-stone-400" on:click={pageChangeThroughDropdownMenue} href="/projects">Projects</a>
