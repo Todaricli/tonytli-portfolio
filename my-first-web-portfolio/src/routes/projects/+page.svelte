@@ -20,14 +20,14 @@
 
 <Loader message={loadingMessage}></Loader>
 <div
-	class="project-main-container flex flex-col gap-5 justify-center item-center w-full h-full pb-24 tablet:px-16 laptop:px-16"
+	class="project-main-container flex flex-col px-2 gap-5 justify-center item-center w-full h-full pb-24 tablet:px-16 laptop:px-16"
 	class:hide={!$mounted}
 >
 	<div
 		class="project-main-desc-div pl-14 pb-12 flex flex-col items-start w-full tablet:pb-16 laptop:pb-24 pt-24 laptop:min-h-screen"
 	>
 		<div
-			class="project-main-desc w-[460px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24 desktop:pb-32"
+			class="project-main-desc w-[380px] text-black text-lg tablet:pb-4 tablet:pl-16 laptop:pl-14 laptop:pb-24 desktop:pb-32"
 		>
 			<p>
 				During my academic journey, I've undertaken some projects, including a blogging web app for
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 	<div
-		class="project-flex-container pt-12 mx-16 flex flex-col items-center justify-center gap-5 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:px-36 desktop:grid-cols-3 desktop:px-64"
+		class="project-flex-container pt-12 mx-6 flex flex-col items-center justify-center gap-16 tablet:mx-12 tablet:grid tablet:grid-cols-2 laptop:grid laptop:px-36 desktop:grid-cols-3 desktop:px-64"
 	>
 		{#if data.projects && data.projects.length > 0}
 			{#each data.projects as project (project.slug)}
