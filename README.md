@@ -1,5 +1,5 @@
-# cs732-assignment-Todaricli
-<img width="800" alt="snapshot of project homepage" src="https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Todaricli/assets/130806678/43a09c86-3302-4db9-84d5-2bd3004d6b99">
+# PORTFOLIO SNAPSHOT
+<img width="880" alt="image" src="https://github.com/Todaricli/tonytli-portfolio/assets/130806678/b1ecae68-fc03-4606-a8d3-c018b05b5b6e">
 
 # MOTIVATION:
 
