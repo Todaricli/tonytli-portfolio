@@ -20,7 +20,7 @@
 <div class="flex flex-col justify-start min-h-screen" class:hide={!$mounted}>
 	<div class="w-full p-28 flex flex-col justify-center items-start gap-5 pb-20 desktop:pb-24 desktop:pl-44 desktop:pt-32">
 		<div class="flex flex-col justify-start items-start gap-5">
-			<h3 class="w-80 text-lg text-gray-300">
+			<h3 class="tablet:w-80 text-lg text-gray-300">
 				Welcome to Tony Tuocheng Li's World of Tech Wizardry! I'm Tony, a prospective Software developer passionate
 				about creating stunning online experiences. Explore my portfolio and discover how I can
 				bring your digital dreams to life.

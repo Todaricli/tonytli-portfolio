@@ -5,7 +5,7 @@
 <div
 	id="about"
 	class:hide={!$mounted}
-	class="flex flex-col items-center gap-4 tablet:grid tablet:grid-cols-6 px-12 tablet:px-16 laptop:px-56 pt-24 laptop:h-screen"
+	class="flex flex-col items-center gap-4 tablet:grid tablet:grid-cols-6 px-12 tablet:px-16 laptop:px-56 pt-24 laptop:min-h-screen"
 >
 	<div class="flex flex-col justify-start items-center col-span-2 h-full">
 		<div class="bg-gray-100 rounded-3xl tablet:max-h-96 flex flex-col justify-center items-center p-2 overflow-hidden h-full">

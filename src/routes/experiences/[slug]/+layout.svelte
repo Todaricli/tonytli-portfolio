@@ -41,7 +41,7 @@
 	<div
 		class="pt-12 flex flex-col justify-center items-center tablet:items-start tablet:w-5/6 tablet:grid tablet:grid-cols-6 gap-4"
 	>
-		<main class="col-span-4 experience-main-content-container laptop:h-screen" class:shade-background={clickToDrop}>
+		<main class="col-span-4 experience-main-content-container laptop:min-h-screen" class:shade-background={clickToDrop}>
 			<slot />
 		</main>
 		<aside class="hidden tablet:flex col-span-2 w-5/6 tablet:w-auto">
