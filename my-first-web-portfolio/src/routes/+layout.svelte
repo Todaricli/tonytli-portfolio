@@ -72,16 +72,15 @@
 	<slot />
 </div>
 
-<footer class="flex flex-col opacity-50 top-full mb-5 text-white text-center justify-center items-center" class:hide={changePage}>
-	<div>
-		<h1 class="text-xl font-bold underline ">TONY TUOCHENG LI</h1>
-		<span>All images from <a class="underline" href="https://www.pngwing.com/en/search?q=king">PNGWING</a></span>
-		<span>All content from <a class="underline" href="https://chat.openai.com/">ChatGPT</a></span>
+<footer class="flex flex-col opacity-50 mb-5 pt-28 text-white text-center justify-center items-center" class:hide={changePage}>
+	<div class="flex flex-row justify-evenly gap-2 text-2xl">
+		<a class="hover:scale-110 hover:text-amber-300" href="https://github.com/Todaricli" target="_blank"><i class="fa-brands fa-github"></i></a>
+		<a class="hover:scale-110 hover:text-amber-300" href="https://www.linkedin.com/in/tuocheng-li-b86b59231/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+		<a class="hover:scale-110 hover:text-amber-300" href="mailto:leetony347@yahoo.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
 	</div>
-	<div>
-		<h1 class="text-xl font-bold underline ">TONY TUOCHENG LI</h1>
-		<span>All images from <a class="underline" href="https://www.pngwing.com/en/search?q=king">PNGWING</a></span>
-		<span>All content from <a class="underline" href="https://chat.openai.com/">ChatGPT</a></span>
+	<div class="flex flex-col items-center">
+		<h1 class="text-xl font-bold underline">TONY TUOCHENG LI</h1>
+		<span>Company images from <a class="underline" href="https://www.pngwing.com/en/search?q=king">PNGWING</a></span>
 	</div>
 </footer>
 

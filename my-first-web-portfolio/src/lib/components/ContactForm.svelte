@@ -51,13 +51,13 @@
 		<div class="flex flex-col pt-16 tablet:pt-2 justify-center items-start gap-2">
 			<h1 class="pb-2">Other Contacts:</h1>
 			<span class="py-2 other-contact-link hover:animate-bounce hover:"
-				><a class="py-2" href="mailto:leetony347@yahoo.com">leetony347@yahoo.com</a></span
+				><a class="py-2" href="mailto:leetony347@yahoo.com" target="_blank">leetony347@yahoo.com</a></span
 			>
 			<span class="py-2 other-contact-link hover:animate-bounce"
-				><a class="py-2" href="https://github.com/Todaricli">Github</a></span
+				><a class="py-2" href="https://github.com/Todaricli" target="_blank">Github</a></span
 			>
 			<span class="py-2 other-contact-link hover:animate-bounce"
-				><a class="py-2" href="https://www.linkedin.com/in/tuocheng-li-b86b59231/">Linkedin</a
+				><a class="py-2" href="https://www.linkedin.com/in/tuocheng-li-b86b59231/" target="_blank">Linkedin</a
 				></span
 			>
 		</div>
