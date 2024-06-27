@@ -1,7 +1,7 @@
 export const jobExperiences = [
     {
         job_title: "Graduate Teaching Assistant",
-        tenure: 3,
+        tenure: 5,
         start: "02/2024",
         end: "current",
         desc: `<p>Due to my achievement of good grades and demonstrated leadership 
@@ -25,7 +25,7 @@ export const jobExperiences = [
         job_title: "Retail Assistant",
         tenure: 5,
         start: "11/2023",
-        end: "current",
+        end: "03/2024",
         desc: `<p>This experience may seem unrelated to my technical background, but 
         working as a retail assistant at Michael Hill has been incredibly valuable. </p><br>
         <p>Despite previously serving as an investment product advisor, I later 

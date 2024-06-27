@@ -34,5 +34,29 @@ export const projects = [
         technologies: ["HTML", "CSS", "JavaScript", "Svelte", "SvelteKit", "Tailwind CSS"],
         desc: `<p>Take a look at my portfolio website, crafted with Svelte and Tailwind CSS. Its modular input data structure allows for seamless updates, ensuring that it effectively showcases my evolving skills and projects. Feel free to explore and see the work I've been doing!</p>
         `
+    },
+    {
+        slug: "project3",
+        name: "Course Review Web APP - Lecturmo",
+        duration: "3 weeks (CI/CD ongoing)",
+        company: "Course Assignment at UOA",
+        image: ".././project_icon/lecturmo.png",
+        github: "https://github.com/Todaricli/lecturmo",
+        website: "https://lecturmo.org/home",
+        technologies: ["JavaScript", "React", "MongoDB", "Tailwind CSS", "OpenAI API", "Node.js", "Express.js"],
+        desc: `<p>University students struggle to select suitable courses due to the vast options and limited information. Platforms like Reddit and Quora lack reliable reviews, and official channels face privacy issues. To address this, our web app, Lecturmo, offers comprehensive course information and authentic reviews, integrating with learning management systems to help students make informed enrollment decisions.</p>
+        `
+    },
+    {
+        slug: "project4",
+        name: "CPNZ Patrol APP",
+        duration: "3 months (CI/CD ongoing)",
+        company: "WDCC UOA; CPNZ",
+        image: ".././project_icon/patrol.png",
+        github: "private",
+        website: "private",
+        technologies: ["TypeScript", "React", "postgreSQL", "Tailwind CSS", "gcloud", "Node.js", "Express.js", "Prisma", "Supabase", "Docker"],
+        desc: `<p>Crime rates have drastically increased over the years in New Zealand. The demand for an easier and more efficient method for community patrols has increased too. </p>
+        `
     }
 ];
