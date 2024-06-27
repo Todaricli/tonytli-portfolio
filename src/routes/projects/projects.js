@@ -56,7 +56,8 @@ export const projects = [
         github: "private",
         website: "private",
         technologies: ["TypeScript", "React", "postgreSQL", "Tailwind CSS", "gcloud", "Node.js", "Express.js", "Prisma", "Supabase", "Docker"],
-        desc: `<p>Crime rates have drastically increased over the years in New Zealand. The demand for an easier and more efficient method for community patrols has increased too. </p>
+        desc: `<p>Motivation: Crime rates have drastically increased over the years in New Zealand. The demand for an easier and more efficient method for community patrols has increased too.</p><br>
+        <p>Serve as backend developer contributed in database schema design and am currently working on email fetching and email's data parsing feature for streamlining the process of communication between patrols and polices using gmail API and gcloud Pub/Sub</p>
         `
     }
 ];
