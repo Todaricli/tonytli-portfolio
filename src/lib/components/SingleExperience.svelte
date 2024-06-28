@@ -7,8 +7,8 @@
 	class="flex flex-col items-center tablet:grid tablet:grid-cols-2 tablet:items-start"
 >
 	<div class="flex flex-col justify-center items-center col-span-1 pr-6">
-		<div class="bg-gray-100 rounded-3xl flex flex-col justify-center items-center p-2">
-			<img class="w-full max-w-96" src={singleExperience.image} alt={singleExperience.job_title} />
+		<div class="bg-gray-100 w-96 h-96 rounded-3xl tablet:w-auto tablet:h-64 flex flex-col justify-center items-center p-2">
+			<img class="w-full tablet:max-w-64" src={singleExperience.image} alt={singleExperience.job_title} />
 		</div>
 		<div
 			class="key-info-div text-xl flex flex-row tablet:flex-col mt-6 pl-6 tablet:items-start gap-5 tablet:gap-0 laptop:items-center text-gray-200 tablet:text-gray-200 opacity-100 pb-10 tracking-wider"
