@@ -10,7 +10,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div on:click={() => toggleShowBack()} class="flip-box w-full flex flex-col items-center justify-center rounded-3xl pb-2">
 	<div
-		class="flip-box-inner p-4 max-w-96 w-full h-96 flex flex-col rounded-3xl justify-center items-center relative bg-black shadow-[0px_5px_5px_5px_rgb(44,50,56)]"
+		class="flip-box-inner p-4 min-w-80 max-w-96 w-full h-96 flex flex-col rounded-3xl justify-center items-center relative bg-black shadow-[0px_5px_5px_5px_rgb(44,50,56)]"
 		class:fliped={showCardBack}
 	>
 		<div class="flip-box-front w-full rounded-3xl absolute">
