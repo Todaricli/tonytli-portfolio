@@ -50,7 +50,7 @@ export const projects = [
     {
         slug: "project4",
         name: "CPNZ Patrol APP",
-        duration: "3 months (CI/CD ongoing)",
+        duration: "6 months (CI/CD ongoing)",
         company: "WDCC UOA; CPNZ",
         image: ".././project_icon/patrol.png",
         github: "private",

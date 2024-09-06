@@ -24,7 +24,7 @@
 				<div class="flex flex-row justify-evenly px-2 w-full pt-6 text-emerald-400">
 					{#if isPrivateProj}
 						<div class="px-5">
-							<p>This is a ongoing commercial private project, no Demo or GitHub Repo provided</p>
+							<p>Due to this web app is now linking to police communication system for testing, no Demo or GitHub Repo provided</p>
 						</div>
 					{:else}
 						<div
