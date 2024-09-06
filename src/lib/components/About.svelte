@@ -39,24 +39,19 @@
 		<h1 class="about-desc-title pb-4 text-3xl">Summary</h1>
 		<div class="main-text-div text-sm">
 			<p>
-				Highly motivated and detail-oriented graduate of Bachelor of Business from Auckland
-				University of Technology, currently pursuing a Master's in Information Technology at the
-				University of Auckland. Seeking opportunities in IT fields to apply my knowledge and skills
-				gained from my studies.
+				My name is Tuocheng Li, also known as Tony, and I am currently pursuing a Master of Information Technology at the University of Auckland. My transition into ICT began during the final year of my Bachelor’s in Finance and Economics, where a demo of Microsoft’s Bing AI analyzing a financial report can be much faster than a experienced analyst sparked my interest in technology.
 			</p>
 			<br>
 			<p>
-				I am diligent and proactive, I thrive on learning new skills and
-				collaborating with co-workers and clients. Possess a strong decision making ability and
-				continuously seek innovative solutions to overcome challenges. With a proactive working
-				attitude, I am committed to creating value for organizations. Eager to contribute my
-				analytical mindset and problem-solving abilities to achieve success in the industry.
+				I am passionate about software development, drawn to its constant learning and problem-solving opportunities. I have skills in JavaScript, TypeScript, Java, Python, HTML5, CSS, SQL, and frameworks such as React, Node.js, PostgreSQL, and MongoDB. I’m also experienced with Google Cloud Platform, Pub/Sub, and Gmail API.
 			</p>
 			<br>
 			<p>
-				In my spare time, I enjoy hiking and taking leisurely walks. There's something serene about
-				immersing myself in nature, breathing in the fresh air, and feeling the earth beneath my
-				feet. It's a peaceful escape from the hustle and bustle of daily life.
+				A key project I’m working on is the CPNZ Patrol App, where I contribute as a backend developer. I’ve also enhanced platforms like Lecturmo by adding AI-driven features.
+			</p>
+			<br>
+			<p>
+				What sets me apart is my ability to bridge technical expertise with strong communication skills, refined through roles in retail, teaching, and finance. In my free time, I enjoy hiking and immersing myself in nature, a peaceful escape from the fast pace of daily life.
 			</p>
 		</div>
 	</div>
