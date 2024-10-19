@@ -3,7 +3,7 @@ import { writable} from "svelte/store";
 /**This is a relatively small and front-end only web app, thus, onmount() will finished runing quite fast, to enable 
  * the loading animation, we use timer to mimic the data loading.
  */
-export const globalDataLoadingDuration = writable(Math.floor(Math.random()* (2000 - 1200 +1) + 1200))
+export const globalDataLoadingDuration = writable(Math.floor(Math.random()* (2000 - 800 +1) + 800))
 
 globalDataLoadingDuration.subscribe((globalDataLoadingDuration) => console.log(globalDataLoadingDuration))
 

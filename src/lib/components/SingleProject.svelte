@@ -28,12 +28,12 @@
 						</div>
 					{:else}
 						<div
-							class="bg-slate-200 rounded-xl p-2 hover:scale-105 hover:animate-pulse w-16 text-center"
+							class="bg-slate-200 rounded-xl p-2 hover:scale-105 w-16 text-center transition-colors duration-500 ease-in-out hover:text-black"
 						>
-							<a href={project.github} target="_blank">Github</a>
+							<a class="w-full h-full" href={project.github} target="_blank">Github</a>
 						</div>
 						<div
-							class="bg-slate-200 rounded-xl p-2 hover:scale-105 hover:animate-pulse w-16 text-center"
+							class="bg-slate-200 rounded-xl p-2 hover:scale-105 transition-colors duration-500 ease-in-out hover:text-black w-16 text-center"
 						>
 							<a href={project.website} target="_blank">Demo</a>
 						</div>
