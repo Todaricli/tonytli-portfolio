@@ -52,6 +52,7 @@ vite.config.ts              plugins: tanstackRouter → react → tailwindcss; a
 components.json             shadcn CLI config (aliases @/components, @/components/ui, @/lib/utils, @/hooks)
 netlify.toml                build cmd, publish=dist, NODE_VERSION=24, SPA redirect /* → /index.html 200
 eslint.config.js            flat config; ignores dist + routeTree.gen.ts
+.vscode/                    settings.json: Tailwind IntelliSense (v4 entry src/index.css, classFunctions cn/cva, classRegex for `const *Class|*Heading|*Link = '…'`); extensions.json recommendations
 public/                     static assets served at / (fonts/, company_icon/, project_icon/, about_icon/, favicon.png)
 src/
   main.tsx                  createRouter({ routeTree, defaultPreload:'intent', scrollRestoration:true }); Register type; <ThemeProvider> wraps <RouterProvider>
