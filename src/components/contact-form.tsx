@@ -6,7 +6,7 @@ import { site } from '@/data/site';
 
 // Underline-only fields, as in the original design
 const fieldClass =
-	'h-auto rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-1 text-2xl placeholder:text-gray-400/25 focus-visible:ring-0 dark:bg-transparent';
+	'h-auto rounded-none border-0 border-b border-black/15 bg-transparent px-0 py-1 text-2xl placeholder:text-gray-400/25 focus-visible:ring-0 dark:border-white/20 dark:bg-transparent';
 
 const otherContacts = [
 	{ href: `mailto:${site.email}`, label: site.email },
@@ -19,12 +19,12 @@ export function ContactForm() {
 	return (
 		<div className="flex animate-page flex-col items-center justify-center pb-12 tablet:py-16 laptop:min-h-screen laptop:py-24">
 			<div className="px-24 pt-12 transition-[padding,transform] duration-1000 laptop:py-24">
-				<h2 className="font-titillium text-3xl text-white opacity-75 transition-[font-size,padding] duration-1000 tablet:text-6xl laptop:text-8xl desktop:px-14 desktop:text-9xl">
+				<h2 className="font-titillium text-3xl text-neutral-900 opacity-75 transition-[font-size,padding] duration-1000 tablet:text-6xl laptop:text-8xl desktop:px-14 desktop:text-9xl dark:text-white">
 					Let's start on something incredible together
 				</h2>
 			</div>
 
-			<div className="flex flex-col items-center justify-between pt-8 pb-12 text-white tablet:grid tablet:grid-cols-4 tablet:items-start">
+			<div className="flex flex-col items-center justify-between pt-8 pb-12 text-neutral-900 tablet:grid tablet:grid-cols-4 tablet:items-start dark:text-white">
 				<div className="col-span-3 flex flex-col items-center justify-center text-2xl">
 					<form action={site.contactFormAction} method="POST" className="w-60">
 						<div className="flex flex-col items-center justify-center gap-8">
@@ -80,11 +80,11 @@ export function ContactForm() {
 					</form>
 				</div>
 				<div className="flex flex-col items-start justify-center gap-2 pt-16 tablet:pt-2">
-					<h1 className="border-b border-white/20 pb-2">Other Contacts:</h1>
+					<h1 className="border-b border-black/15 pb-2 dark:border-white/20">Other Contacts:</h1>
 					{otherContacts.map((contact) => (
 						<span
 							key={contact.label}
-							className="py-2 hover:animate-bounce hover:border-b hover:border-white/50"
+							className="py-2 hover:animate-bounce hover:border-b hover:border-black/40 dark:hover:border-white/50"
 						>
 							<a className="py-2" href={contact.href} target="_blank" rel="noreferrer">
 								{contact.label}

@@ -70,10 +70,13 @@ function RootLayout() {
 
 function NotFound() {
 	return (
-		<div className="flex min-h-[60vh] animate-page flex-col items-center justify-center gap-6 px-8 pt-24 text-center text-white">
+		<div className="flex min-h-[60vh] animate-page flex-col items-center justify-center gap-6 px-8 pt-24 text-center text-neutral-900 dark:text-white">
 			<h1 className="font-titillium text-6xl opacity-70">404</h1>
-			<p className="text-lg text-gray-300">This page doesn't exist.</p>
-			<Link to="/" className="font-mono text-gray-300 underline hover:text-white">
+			<p className="text-lg text-neutral-700 dark:text-gray-300">This page doesn't exist.</p>
+			<Link
+				to="/"
+				className="font-mono text-neutral-700 underline hover:text-black dark:text-gray-300 dark:hover:text-white"
+			>
 				Back home
 			</Link>
 		</div>

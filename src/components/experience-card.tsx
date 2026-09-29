@@ -13,7 +13,7 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
 					alt={experience.company}
 				/>
 			</div>
-			<div className="flex flex-col items-start justify-start gap-4 pr-14 pl-2 font-serif text-xl text-slate-300">
+			<div className="flex flex-col items-start justify-start gap-4 pr-14 pl-2 font-serif text-xl text-slate-700 dark:text-slate-300">
 				<p className="pt-2 text-sm">Tenure: {experience.tenure} Months</p>
 				<div className="p-2 pl-0">
 					<Link

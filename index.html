@@ -1,14 +1,28 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="color-scheme" content="light dark" />
 		<meta
 			name="description"
 			content="Tony Tuocheng Li - software developer portfolio: projects, experience and contact."
 		/>
 		<title>Tony T Li | Portfolio</title>
+		<!-- Apply the saved theme before first paint (key must match THEME_STORAGE_KEY in src/hooks/use-theme.ts) -->
+		<script>
+			(function () {
+				var theme = 'system';
+				try {
+					theme = localStorage.getItem('theme') || 'system';
+				} catch (e) {}
+				if (theme !== 'light' && theme !== 'dark') {
+					theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				}
+				document.documentElement.classList.add(theme);
+			})();
+		</script>
 	</head>
 	<body>
 		<div id="root"></div>

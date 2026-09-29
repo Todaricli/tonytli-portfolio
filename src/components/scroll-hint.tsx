@@ -7,7 +7,7 @@ export function ScrollHint({ className }: { className?: string }) {
 	return (
 		<div
 			className={cn(
-				'hidden w-full animate-bounce flex-row items-center justify-center text-2xl text-white opacity-50 laptop:flex',
+				'hidden w-full animate-bounce flex-row items-center justify-center text-2xl text-neutral-900 opacity-50 laptop:flex dark:text-white',
 				className
 			)}
 		>

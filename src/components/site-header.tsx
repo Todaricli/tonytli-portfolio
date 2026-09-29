@@ -1,12 +1,14 @@
 import { Link } from '@tanstack/react-router';
 
+import { ModeToggle } from '@/components/mode-toggle';
 import { navLinks } from '@/data/site';
 
-/** Desktop navigation (tablet breakpoint and up). */
+/** Desktop navigation (tablet breakpoint and up); theme toggle sits top-left. */
 export function SiteHeader() {
 	return (
-		<div className="hidden flex-row justify-between p-2 font-titillium text-gray-300 tablet:flex">
-			<h1 className="invisible">Tony T Li</h1>
+		<div className="hidden flex-row justify-between p-2 font-titillium text-neutral-700 tablet:flex dark:text-gray-300">
+			<h1 className="sr-only">Tony T Li</h1>
+			<ModeToggle />
 			<nav className="flex w-1/2 flex-row justify-evenly">
 				{navLinks.map((link) => (
 					<Link

@@ -1,7 +1,8 @@
 import { RichText } from '@/components/rich-text';
 import type { Experience } from '@/data/types';
 
-const keyInfoClass = 'flex flex-col justify-end border-b border-white/20 font-bebas';
+const keyInfoClass =
+	'flex flex-col justify-end border-b border-black/15 font-bebas dark:border-white/20';
 
 /** Body of /experiences/$slug. */
 export function ExperienceDetail({ experience }: { experience: Experience }) {
@@ -15,7 +16,7 @@ export function ExperienceDetail({ experience }: { experience: Experience }) {
 						alt={experience.job_title}
 					/>
 				</div>
-				<div className="mt-6 flex flex-row gap-5 pb-10 pl-6 text-xl tracking-wider text-gray-200 opacity-100 tablet:flex-col tablet:items-start tablet:gap-0 tablet:text-gray-200 laptop:items-center">
+				<div className="mt-6 flex flex-row gap-5 pb-10 pl-6 text-xl tracking-wider text-neutral-700 opacity-100 tablet:flex-col tablet:items-start tablet:gap-0 laptop:items-center dark:text-gray-200">
 					<div className={keyInfoClass}>
 						<p>{experience.job_title}</p>
 					</div>
@@ -30,7 +31,7 @@ export function ExperienceDetail({ experience }: { experience: Experience }) {
 					</div>
 				</div>
 			</div>
-			<div className="col-span-1 pr-8 text-sm text-white">
+			<div className="col-span-1 pr-8 text-sm text-neutral-900 dark:text-white">
 				<h1 className="pb-4 font-teko text-3xl">ABOUT THIS ROLE</h1>
 				<RichText html={experience.desc} className="mb-[50px] tablet:text-sm laptop:text-[16px]" />
 			</div>

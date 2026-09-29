@@ -49,8 +49,8 @@ The app runs at http://localhost:5173.
 ```
 public/                 Static files: fonts, company/project/profile images, favicon
 src/
-  main.tsx              App entry: creates the router
-  index.css             Tailwind setup, theme, fonts and animations
+  main.tsx              App entry: creates the router, wraps it in the ThemeProvider
+  index.css             Tailwind setup, light/dark theme, fonts and animations
   routes/               One file per page (TanStack Router file-based routing)
     __root.tsx          Shared layout: nav, page loader, footer, 404
     index.tsx           Home
@@ -61,12 +61,13 @@ src/
   components/           Site components (project flip card, nav, footer, contact form…)
   components/ui/        shadcn/ui components (generated with the shadcn CLI)
   data/                 All the content: projects, experiences, links
-  hooks/                Small React hooks (page loader timing, media queries)
+  hooks/                Small React hooks (page loader timing, media queries, theme)
 ```
 
 ### How the pages work
 
 - **Routing:** each file in `src/routes/` becomes a page. The router plugin generates `src/routeTree.gen.ts` automatically, so don't edit it by hand.
+- **Light / dark theme:** the sun/moon toggle at the top-left of the nav picks Light, Dark or System (the default, which follows the OS). The choice is saved in `localStorage`, and a small script in `index.html` applies it before the page paints.
 - **Page loader:** each top-level page shows a short animated loader with its name ("Home.", "Projects." …), set through the route's `staticData.loaderLabel`.
 - **Experience pages:** `/experiences/$slug` looks the slug up in `src/data/experiences.ts` and shows a 404 page if it isn't found.
 - **Responsive design:** custom breakpoints are `tablet` (740px), `laptop` (1124px) and `desktop` (1560px). Below tablet width the navigation becomes a dropdown menu.

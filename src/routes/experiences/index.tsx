@@ -24,13 +24,13 @@ function ExperiencesPage() {
 						global environments.
 					</p>
 				</div>
-				<h1 className="mt-8 pt-2 font-titillium text-6xl text-white opacity-70 transition-[margin,transform,padding] duration-1000 tablet:translate-x-24 tablet:scale-[1.8] laptop:translate-x-80 laptop:scale-[2.8] laptop:pr-0 desktop:translate-x-[530px] desktop:scale-[3.5]">
+				<h1 className="mt-8 pt-2 font-titillium text-6xl text-neutral-900 opacity-70 transition-[margin,transform,padding] duration-1000 tablet:translate-x-24 tablet:scale-[1.8] laptop:translate-x-80 laptop:scale-[2.8] laptop:pr-0 desktop:translate-x-[530px] desktop:scale-[3.5] dark:text-white">
 					MY EXPERIENCE
 				</h1>
 				<ScrollHint className="laptop:pt-36 desktop:pt-48" />
 			</div>
 
-			<div className="flex flex-col items-center justify-center gap-16 border-t border-white/20 pt-12 pb-24 tablet:grid tablet:grid-cols-2">
+			<div className="flex flex-col items-center justify-center gap-16 border-t border-black/15 pt-12 pb-24 tablet:grid tablet:grid-cols-2 dark:border-white/20">
 				{experiences.map((experience) => (
 					<ExperienceCard key={experience.slug} experience={experience} />
 				))}

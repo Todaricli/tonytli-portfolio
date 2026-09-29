@@ -1,6 +1,7 @@
 import { site } from '@/data/site';
 
-const keyInfoHeading = 'flex flex-col justify-end border-b border-white/20 font-bebas';
+const keyInfoHeading =
+	'flex flex-col justify-end border-b border-black/15 font-bebas dark:border-white/20';
 const contactLink = 'text-sm transition-transform duration-1000 hover:translate-x-4';
 
 export function AboutSection() {
@@ -14,7 +15,7 @@ export function AboutSection() {
 						alt="tony li"
 					/>
 				</div>
-				<div className="flex flex-col items-start gap-5 pt-6 pb-10 pl-6 text-xl tracking-widest text-gray-200 opacity-100 tablet:gap-0 tablet:text-gray-200">
+				<div className="flex flex-col items-start gap-5 pt-6 pb-10 pl-6 text-xl tracking-widest text-neutral-700 opacity-100 tablet:gap-0 dark:text-gray-200">
 					<div>
 						<h1 className={keyInfoHeading}>TONY TUOCHENG Li</h1>
 					</div>
@@ -38,7 +39,7 @@ export function AboutSection() {
 					</div>
 				</div>
 			</div>
-			<div className="col-span-2 flex h-full flex-col items-start text-sm text-white">
+			<div className="col-span-2 flex h-full flex-col items-start text-sm text-neutral-900 dark:text-white">
 				<h1 className="pb-4 font-teko text-3xl">Summary</h1>
 				<div className="mb-[50px] space-y-5 text-sm">
 					<p>

@@ -10,7 +10,7 @@ const socials = [
 
 export function SiteFooter() {
 	return (
-		<footer className="mb-5 flex flex-col items-center justify-center pt-28 text-center text-white opacity-50">
+		<footer className="mb-5 flex flex-col items-center justify-center pt-28 text-center text-neutral-900 opacity-50 dark:text-white">
 			<div className="flex flex-row justify-evenly gap-2 text-2xl">
 				{socials.map(({ href, label, Icon }) => (
 					<a
@@ -19,7 +19,7 @@ export function SiteFooter() {
 						target="_blank"
 						rel="noreferrer"
 						aria-label={label}
-						className="hover:scale-110 hover:text-amber-300"
+						className="hover:scale-110 hover:text-amber-600 dark:hover:text-amber-300"
 					>
 						<Icon />
 					</a>

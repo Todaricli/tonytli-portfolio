@@ -34,7 +34,7 @@ export function ProjectCard({ project }: { project: Project }) {
 				onKeyDown={onKeyDown}
 				data-flipped={flipped}
 				// overflow-visible is required: overflow-hidden would flatten preserve-3d
-				className="flip-box-inner relative h-96 w-full max-w-96 min-w-80 cursor-pointer items-center justify-center gap-0 overflow-visible rounded-3xl bg-black p-4 shadow-[0px_5px_5px_5px_rgb(44,50,56)] ring-0"
+				className="flip-box-inner relative h-96 w-full max-w-96 min-w-80 cursor-pointer items-center justify-center gap-0 overflow-visible rounded-3xl bg-white p-4 shadow-[0px_5px_5px_5px_rgb(180,186,192)] ring-0 dark:bg-black dark:shadow-[0px_5px_5px_5px_rgb(44,50,56)]"
 			>
 				{/* Front */}
 				<div className="flip-box-face absolute w-full rounded-3xl font-bebas">
@@ -45,7 +45,9 @@ export function ProjectCard({ project }: { project: Project }) {
 							alt={project.name}
 						/>
 					</div>
-					<h2 className="px-2 text-center text-xl tracking-wide text-white">{project.name}</h2>
+					<h2 className="px-2 text-center text-xl tracking-wide text-neutral-900 dark:text-white">
+						{project.name}
+					</h2>
 					{project.github && project.website && (
 						<div className="flex w-full flex-row justify-evenly px-2 pt-6 text-emerald-400">
 							{isPrivate ? (
@@ -82,20 +84,20 @@ export function ProjectCard({ project }: { project: Project }) {
 				</div>
 
 				{/* Back */}
-				<div className="flip-box-face flip-box-back absolute flex min-h-96 w-full flex-col items-start justify-start overflow-hidden rounded-3xl p-2 font-titillium text-white">
+				<div className="flip-box-face flip-box-back absolute flex min-h-96 w-full flex-col items-start justify-start overflow-hidden rounded-3xl p-2 font-titillium text-neutral-900 dark:text-white">
 					<div className="px-2 font-teko tracking-wider">
 						<h2>{project.name}</h2>
 						<h2>Duration: {project.duration}</h2>
 						<h2>Client: {project.company}</h2>
 					</div>
-					<div className="flex w-full flex-col items-center pt-0 text-sky-100">
+					<div className="flex w-full flex-col items-center pt-0 text-sky-800 dark:text-sky-100">
 						<div className="grid grid-cols-3 gap-2 py-2">
 							{project.technologies.map((tech) => (
 								<Badge
 									key={tech}
 									asChild
 									variant="ghost"
-									className="h-auto justify-center rounded-none border-0 border-r-2 border-r-gray-200 px-0 pr-2 text-xs font-normal whitespace-normal text-sky-100 transition-[transform,z-index] duration-500 hover:z-10 hover:translate-x-4 hover:animate-pulse hover:bg-transparent hover:text-sky-100"
+									className="h-auto justify-center rounded-none border-0 border-r-2 border-r-neutral-800 px-0 pr-2 text-xs font-normal whitespace-normal text-sky-800 transition-[transform,z-index] duration-500 hover:z-10 hover:translate-x-4 hover:animate-pulse hover:bg-transparent hover:text-sky-800 dark:border-r-gray-200 dark:text-sky-100 dark:hover:text-sky-100"
 								>
 									<a
 										href={`https://www.google.co.nz/search?q=${encodeURIComponent(tech)}`}
