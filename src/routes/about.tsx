@@ -1,8 +1,8 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, redirect } from '@tanstack/react-router';
 
-import { AboutSection } from '@/components/about-section';
-
+// Legacy page, now a section of the single-page home
 export const Route = createFileRoute('/about')({
-	staticData: { loaderLabel: 'About.' },
-	component: AboutSection
+	beforeLoad: () => {
+		throw redirect({ to: '/', hash: 'about', replace: true });
+	}
 });

@@ -13,9 +13,9 @@ Read `tonyli-portfolio.md` at the repo root. Sections 4–10 define the structur
 ## Rules
 
 - Breakpoints are `tablet:` (740px), `laptop:` (1124px) and `desktop:` (1560px) only. `sm/md/lg/xl` do not exist.
-- Use the fonts `font-titillium`, `font-bebas` and `font-teko`, and the existing `animate-*` tokens. Add new keyframes top-level in `src/index.css` (outside `@theme`) and expose them as `--animate-*` inside `@theme`.
+- Follow the design system in `tonyli-portfolio.md` §9: colour tokens `canvas` / `ink` / `muted-foreground` / `line` / `brand` (the blue; never shadcn `accent`), fonts `font-sans` / `font-display` / `font-grotesk`, the `type-*` scale, flat hairline layout and minimal motion. Keep new animation subtle and make sure it is disabled under `prefers-reduced-motion`.
 - Prefer shadcn primitives (`@/components/ui/*`) for interactive elements. Add missing ones with `npx shadcn@latest add <name>` (the CLI might add dependencies; check `package.json` afterwards). Restyle at the call site with `className`, merged via `cn` from `@/lib/utils`.
-- Site components go in `src/components/<kebab-name>.tsx` as named exports. Pages go in `src/routes/` via `createFileRoute`. Set `staticData: { loaderLabel: 'Name.' }` if the page should show the preloader, and add nav entries in `src/data/site.ts` `navLinks`.
+- Site components go in `src/components/<kebab-name>.tsx` as named exports. Home page sections go in `src/components/sections/`, get an `id` + `scroll-mt-16` + `useReveal`, and are listed in `src/data/site.ts` `navLinks` if they belong in the nav. Separate pages go in `src/routes/` via `createFileRoute`.
 - Keep content in `src/data/`, not hard-coded in components, unless it is one-off page copy.
 - Accessibility: real buttons and links, `aria-label` on icon-only controls, keyboard support for custom interactive elements. External links use `target="_blank" rel="noreferrer"`.
 - Never edit `src/routeTree.gen.ts` or `dist/`.

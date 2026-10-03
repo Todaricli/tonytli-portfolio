@@ -1,20 +1,8 @@
-import { createRootRoute, Link, Outlet, useMatches, useRouterState } from '@tanstack/react-router';
-import { lazy, Suspense, useState } from 'react';
+import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
+import { lazy, Suspense } from 'react';
 
-import { MobileNav } from '@/components/mobile-nav';
-import { PageLoader } from '@/components/page-loader';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
-import { TABLET_QUERY, useMediaQuery } from '@/hooks/use-media-query';
-import { usePageReady } from '@/hooks/use-page-ready';
-import { cn } from '@/lib/utils';
-
-declare module '@tanstack/react-router' {
-	interface StaticDataRouteOption {
-		/** When set, the route shows the full-screen PageLoader with this label on every visit. */
-		loaderLabel?: string;
-	}
-}
 
 const RouterDevtools = import.meta.env.DEV
 	? lazy(() =>
@@ -30,37 +18,13 @@ export const Route = createRootRoute({
 });
 
 function RootLayout() {
-	const matches = useMatches();
-	const loaderLabel = [...matches].reverse().find((match) => match.staticData?.loaderLabel)
-		?.staticData.loaderLabel;
-	// Unique per navigation, so revisiting a page replays the loader
-	const navigationKey = useRouterState({
-		select: (state) => state.location.state.__TSR_key ?? state.location.href
-	});
-	const ready = usePageReady(loaderLabel ? navigationKey : null);
-
-	const isTablet = useMediaQuery(TABLET_QUERY);
-	const [menuOpen, setMenuOpen] = useState(false);
-	// The mobile menu can't stay open once the desktop nav takes over
-	const navOpen = menuOpen && !isTablet;
-
 	return (
 		<>
 			<SiteHeader />
-			{ready && <MobileNav open={navOpen} onOpenChange={setMenuOpen} />}
-			{!ready && loaderLabel && <PageLoader message={loaderLabel} />}
-
-			<div
-				className={cn(
-					'transition-opacity duration-2000',
-					navOpen && 'opacity-25',
-					!ready && 'hidden'
-				)}
-			>
+			<main>
 				<Outlet />
-			</div>
-
-			{ready && <SiteFooter />}
+			</main>
+			<SiteFooter />
 			<Suspense>
 				<RouterDevtools />
 			</Suspense>
@@ -70,14 +34,16 @@ function RootLayout() {
 
 function NotFound() {
 	return (
-		<div className="flex min-h-[60vh] animate-page flex-col items-center justify-center gap-6 px-8 pt-24 text-center text-neutral-900 dark:text-white">
-			<h1 className="font-titillium text-6xl opacity-70">404</h1>
-			<p className="text-lg text-neutral-700 dark:text-gray-300">This page doesn't exist.</p>
+		<div className="mx-auto flex min-h-[60vh] max-w-[1600px] flex-col justify-center gap-8 px-4 py-24 tablet:px-8 laptop:px-12">
+			<p className="type-label text-muted-foreground">
+				<span className="text-brand">404</span> — Not found
+			</p>
+			<h1 className="type-display font-medium">This page doesn't exist.</h1>
 			<Link
 				to="/"
-				className="font-mono text-neutral-700 underline hover:text-black dark:text-gray-300 dark:hover:text-white"
+				className="self-start border-b border-current pb-1 type-label transition-colors duration-300 hover:text-brand"
 			>
-				Back home
+				Back home →
 			</Link>
 		</div>
 	);

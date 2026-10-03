@@ -1,40 +1,37 @@
 import { RichText } from '@/components/rich-text';
 import type { Experience } from '@/data/types';
 
-const keyInfoClass =
-	'flex flex-col justify-end border-b border-black/15 font-bebas dark:border-white/20';
-
 /** Body of /experiences/$slug. */
 export function ExperienceDetail({ experience }: { experience: Experience }) {
+	const facts = [
+		{ label: 'Company', value: experience.company },
+		{ label: 'Location', value: experience.address },
+		{ label: 'Period', value: `${experience.start} – ${experience.end}` },
+		{ label: 'Tenure', value: `${experience.tenure} months` }
+	];
+
 	return (
-		<div className="flex flex-col items-center tablet:grid tablet:grid-cols-2 tablet:items-start">
-			<div className="col-span-1 flex flex-col items-center justify-center pr-6">
-				<div className="flex h-96 w-96 flex-col items-center justify-center rounded-3xl bg-gray-100 p-2 tablet:h-64 tablet:w-auto">
-					<img
-						className="w-full tablet:max-w-64"
-						src={experience.image}
-						alt={experience.job_title}
-					/>
+		<article className="flex flex-col gap-12">
+			<h1 className="type-section font-medium">{experience.job_title}</h1>
+
+			<dl className="grid gap-6 border-y border-line py-6 tablet:grid-cols-2 laptop:grid-cols-4">
+				{facts.map((fact) => (
+					<div key={fact.label} className="flex flex-col gap-1">
+						<dt className="type-label text-muted-foreground">{fact.label}</dt>
+						<dd className="type-body">{fact.value}</dd>
+					</div>
+				))}
+			</dl>
+
+			<div className="grid gap-12 laptop:grid-cols-[16rem_1fr] laptop:gap-16">
+				<div className="flex aspect-square w-48 items-center justify-center bg-white p-6 laptop:w-full">
+					<img src={experience.image} alt={experience.company} className="max-h-full max-w-full" />
 				</div>
-				<div className="mt-6 flex flex-row gap-5 pb-10 pl-6 text-xl tracking-wider text-neutral-700 opacity-100 tablet:flex-col tablet:items-start tablet:gap-0 laptop:items-center dark:text-gray-200">
-					<div className={keyInfoClass}>
-						<p>{experience.job_title}</p>
-					</div>
-					<div className={`${keyInfoClass} tablet:pt-4 laptop:text-center`}>
-						<p>Tenure: {experience.tenure} Months</p>
-						<p>
-							From {experience.start} to {experience.end}
-						</p>
-					</div>
-					<div className={`${keyInfoClass} tablet:pt-4`}>
-						<p>{experience.address}</p>
-					</div>
+				<div className="flex flex-col gap-4">
+					<h2 className="type-label text-muted-foreground">About this role</h2>
+					<RichText html={experience.desc} className="max-w-[65ch] type-body-lg" />
 				</div>
 			</div>
-			<div className="col-span-1 pr-8 text-sm text-neutral-900 dark:text-white">
-				<h1 className="pb-4 font-teko text-3xl">ABOUT THIS ROLE</h1>
-				<RichText html={experience.desc} className="mb-[50px] tablet:text-sm laptop:text-[16px]" />
-			</div>
-		</div>
+		</article>
 	);
 }

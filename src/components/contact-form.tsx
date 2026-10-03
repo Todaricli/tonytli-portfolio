@@ -1,98 +1,108 @@
+import { SectionHeading } from '@/components/section-heading';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { site } from '@/data/site';
+import { useReveal } from '@/hooks/use-reveal';
 
-// Underline-only fields, as in the original design
+// Underline-only fields
 const fieldClass =
-	'h-auto rounded-none border-0 border-b border-black/15 bg-transparent px-0 py-1 text-2xl placeholder:text-gray-400/25 focus-visible:ring-0 dark:border-white/20 dark:bg-transparent';
+	'h-auto rounded-none border-0 border-b border-line bg-transparent px-0 py-2 type-body-lg shadow-none placeholder:text-muted-foreground/60 focus-visible:border-brand focus-visible:ring-0 dark:bg-transparent';
+const labelClass = 'type-label font-normal text-muted-foreground';
+const contactLinkClass =
+	'type-body-lg border-b border-line pb-1 transition-colors duration-300 hover:border-brand hover:text-brand';
 
 const otherContacts = [
 	{ href: `mailto:${site.email}`, label: site.email },
-	{ href: site.github, label: 'Github' },
-	{ href: site.linkedin, label: 'Linkedin' }
+	{ href: site.github, label: 'GitHub ↗' },
+	{ href: site.linkedin, label: 'LinkedIn ↗' }
 ];
 
-/** Contact page body. Plain HTML form POST to getform.io (no JS submit handling). */
+/** #contact: plain HTML form POST to getform.io (no JS submit handling). */
 export function ContactForm() {
+	const ref = useReveal<HTMLElement>();
+
 	return (
-		<div className="flex animate-page flex-col items-center justify-center pb-12 tablet:py-16 laptop:min-h-screen laptop:py-24">
-			<div className="px-24 pt-12 transition-[padding,transform] duration-1000 laptop:py-24">
-				<h2 className="font-titillium text-3xl text-neutral-900 opacity-75 transition-[font-size,padding] duration-1000 tablet:text-6xl laptop:text-8xl desktop:px-14 desktop:text-9xl dark:text-white">
-					Let's start on something incredible together
-				</h2>
-			</div>
+		<section
+			ref={ref}
+			id="contact"
+			data-reveal
+			className="mx-auto max-w-[1600px] scroll-mt-16 px-4 py-20 tablet:px-8 laptop:px-12 laptop:py-32"
+		>
+			<SectionHeading index="04" label="Contact" className="pb-12 laptop:pb-20">
+				Let's <span className="text-brand">build</span> something.
+			</SectionHeading>
 
-			<div className="flex flex-col items-center justify-between pt-8 pb-12 text-neutral-900 tablet:grid tablet:grid-cols-4 tablet:items-start dark:text-white">
-				<div className="col-span-3 flex flex-col items-center justify-center text-2xl">
-					<form action={site.contactFormAction} method="POST" className="w-60">
-						<div className="flex flex-col items-center justify-center gap-8">
-							<div className="flex w-full flex-col gap-4">
-								<Label htmlFor="name" className="text-2xl font-normal">
-									Name:
-								</Label>
-								<Input
-									required
-									id="name"
-									type="text"
-									name="name"
-									placeholder="Tony Li"
-									autoComplete="on"
-									className={fieldClass}
-								/>
-							</div>
-							<div className="flex w-full flex-col gap-4">
-								<Label htmlFor="email" className="text-2xl font-normal">
-									Email:
-								</Label>
-								<Input
-									required
-									id="email"
-									type="email"
-									name="email"
-									placeholder={site.email}
-									autoComplete="on"
-									className={fieldClass}
-								/>
-							</div>
-							<div className="flex w-full flex-col items-start gap-4">
-								<Label htmlFor="message" className="text-2xl font-normal">
-									Message:
-								</Label>
-								<Textarea
-									id="message"
-									name="message"
-									placeholder="Hello Tony, I would like..."
-									className={`${fieldClass} min-h-48`}
-								/>
-							</div>
-							{/* Honeypot field to deter spam bots */}
-							<input type="hidden" name="_gotcha" style={{ display: 'none' }} />
-
-							<Button
-								type="submit"
-								className="h-auto rounded-lg bg-gray-600 p-2 font-mono text-lg font-normal text-white transition-transform duration-2000 hover:translate-x-5 hover:animate-button-effect hover:bg-gray-600"
-							>
-								Lets chat!
-							</Button>
+			<div className="grid gap-16 laptop:grid-cols-[1fr_minmax(0,0.6fr)]">
+				<form action={site.contactFormAction} method="POST" className="flex flex-col gap-10">
+					<div className="grid gap-10 tablet:grid-cols-2">
+						<div className="flex flex-col gap-2">
+							<Label htmlFor="name" className={labelClass}>
+								Name
+							</Label>
+							<Input
+								required
+								id="name"
+								type="text"
+								name="name"
+								placeholder="Your name"
+								autoComplete="name"
+								className={fieldClass}
+							/>
 						</div>
-					</form>
-				</div>
-				<div className="flex flex-col items-start justify-center gap-2 pt-16 tablet:pt-2">
-					<h1 className="border-b border-black/15 pb-2 dark:border-white/20">Other Contacts:</h1>
+						<div className="flex flex-col gap-2">
+							<Label htmlFor="email" className={labelClass}>
+								Email
+							</Label>
+							<Input
+								required
+								id="email"
+								type="email"
+								name="email"
+								placeholder="you@example.com"
+								autoComplete="email"
+								className={fieldClass}
+							/>
+						</div>
+					</div>
+					<div className="flex flex-col gap-2">
+						<Label htmlFor="message" className={labelClass}>
+							Message
+						</Label>
+						<Textarea
+							id="message"
+							name="message"
+							placeholder="Hello Tony, I would like..."
+							className={`${fieldClass} min-h-40 resize-y`}
+						/>
+					</div>
+					{/* Honeypot field to deter spam bots */}
+					<input type="hidden" name="_gotcha" style={{ display: 'none' }} />
+
+					<Button
+						type="submit"
+						className="h-auto self-start rounded-none bg-brand px-8 py-4 type-label text-canvas transition-opacity duration-300 hover:bg-brand hover:opacity-85"
+					>
+						Send details ↗
+					</Button>
+				</form>
+
+				<div className="flex flex-col items-start gap-4">
+					<p className="type-label text-muted-foreground">Or reach me directly</p>
 					{otherContacts.map((contact) => (
-						<span
+						<a
 							key={contact.label}
-							className="py-2 hover:animate-bounce hover:border-b hover:border-black/40 dark:hover:border-white/50"
+							href={contact.href}
+							target="_blank"
+							rel="noreferrer"
+							className={contactLinkClass}
 						>
-							<a className="py-2" href={contact.href} target="_blank" rel="noreferrer">
-								{contact.label}
-							</a>
-						</span>
+							{contact.label}
+						</a>
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

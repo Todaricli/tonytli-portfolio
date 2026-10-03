@@ -15,7 +15,7 @@ Read `tonyli-portfolio.md` at the repo root, especially ยง6 (data schemas) and ย
 - Projects: `src/data/projects.ts` (`Project[]`)
 - Experiences: `src/data/experiences.ts` (`Experience[]`, newest first)
 - Contact and social links, nav items: `src/data/site.ts`
-- Page copy: the intro paragraphs in `src/routes/index.tsx`, `projects.tsx` and `experiences/index.tsx`, the About summary in `src/components/about-section.tsx`, and the contact heading in `src/components/contact-form.tsx`
+- Page copy: the hero intro in `src/components/sections/hero.tsx`, section titles in `src/components/sections/*`, the About summary in `src/components/about-section.tsx`, the contact heading in `src/components/contact-form.tsx`, and `site` (role, location, tagline) plus `skills` in `src/data/site.ts`
 - Images: `public/project_icon/`, `public/company_icon/` and `public/about_icon/`, referenced by absolute path (e.g. `/project_icon/foo.png`)
 
 ## Rules

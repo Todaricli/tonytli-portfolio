@@ -1,11 +1,8 @@
-import { createFileRoute, notFound } from '@tanstack/react-router';
-import { useState } from 'react';
+import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 
 import { ExperienceDetail } from '@/components/experience-detail';
-import { ExperienceMenu, ExperienceSidebar } from '@/components/experience-nav';
+import { OtherRoles } from '@/components/experience-nav';
 import { getExperience } from '@/data/experiences';
-import { TABLET_QUERY, useMediaQuery } from '@/hooks/use-media-query';
-import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/experiences/$slug')({
 	loader: ({ params }) => {
@@ -18,26 +15,23 @@ export const Route = createFileRoute('/experiences/$slug')({
 
 function ExperiencePage() {
 	const { experience } = Route.useLoaderData();
-	const isTablet = useMediaQuery(TABLET_QUERY);
-	const [menuOpen, setMenuOpen] = useState(false);
-	const navOpen = menuOpen && !isTablet;
 
 	return (
-		<div className="flex w-full animate-experience-fast flex-col items-center justify-start px-8 pt-24">
-			<div className="flex flex-col items-center justify-center gap-4 pt-12 tablet:grid tablet:w-5/6 tablet:grid-cols-6 tablet:items-start">
-				<main
-					className={cn(
-						'col-span-4 transition-opacity duration-1000 laptop:min-h-screen',
-						navOpen && 'opacity-25'
-					)}
-				>
-					{/* key replays the fade-in when switching between experiences */}
-					<div key={experience.slug} className="animate-experience">
-						<ExperienceDetail experience={experience} />
-					</div>
-				</main>
-				<ExperienceSidebar />
-				<ExperienceMenu open={navOpen} onOpenChange={setMenuOpen} />
+		<div className="mx-auto flex max-w-[1600px] flex-col gap-12 px-4 pt-12 pb-24 tablet:px-8 laptop:px-12 laptop:pt-20">
+			<Link
+				to="/"
+				hash="experience"
+				className="self-start type-label transition-colors duration-300 hover:text-brand"
+			>
+				← Back to experience
+			</Link>
+
+			<div className="grid gap-16 laptop:grid-cols-[1fr_18rem]">
+				{/* key replays the fade-in when switching between roles */}
+				<div key={experience.slug} className="animate-in duration-500 fade-in">
+					<ExperienceDetail experience={experience} />
+				</div>
+				<OtherRoles className="laptop:sticky laptop:top-28 laptop:self-start" />
 			</div>
 		</div>
 	);

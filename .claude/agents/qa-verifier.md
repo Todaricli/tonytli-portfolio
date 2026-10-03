@@ -24,14 +24,17 @@ Read `tonyli-portfolio.md` at the repo root to learn the expected routes, behavi
    - External links have `rel="noreferrer"`.
    - `tonyli-portfolio.md` was updated if routes, schemas, components, deps or tokens changed.
 3. Runtime: run `npm run preview` in the background and confirm each route returns 200 and renders:
-   - `/`, `/projects`, `/experiences`, `/experiences/<each valid slug>`, `/about`, `/contact`
+   - `/` and `/experiences/<each valid slug>`
+   - `/projects`, `/experiences`, `/about`, `/contact` redirect to `/#work`, `/#experience`, `/#about`, `/#contact`
    - an unknown path and an unknown slug show the 404 view
 
    If a browser automation tool is available, also check:
-   - the preloader shows its label then hides
-   - project cards flip
-   - the experiences sidebar highlights the active item
-   - mobile menus below 740px open, dim the content, and close when resized above 740px
+   - header links smooth-scroll to each section without the sticky header covering the heading
+   - the theme toggle (top-left) switches Light / Dark / System and both themes are readable
+   - on laptop+ the Work list dims inactive rows and swaps the preview image; project Details expand
+   - the Other roles list highlights the active role on `/experiences/$slug`
+   - the mobile menu below 740px opens and closes when resized above 740px
+   - with reduced motion emulated, the marquee and reveals are static
    - there are no console errors
 
 4. Stop any background server you started.

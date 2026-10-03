@@ -11,7 +11,7 @@
 
 - After any change to routes, data schemas, components, scripts, dependencies, styling tokens or deployment, update the matching section of `tonyli-portfolio.md` in the same change. Update `README.md` too if the human-facing setup or structure changed.
 - Before declaring work done, run: `npm run typecheck && npm run lint && npm run build` (use Node >= 22.13; on this machine prepend `~/.local/node24/bin` to `PATH` if `node -v` is older).
-- Preserve the existing visual design: shadcn primitives for structure/accessibility, restyled with `className` to match. Use the custom breakpoints `tablet:` / `laptop:` / `desktop:` only.
+- Follow the design system in `tonyli-portfolio.md` §9 (editorial, blue `brand` accent, flat, minimal motion): shadcn primitives for structure/accessibility, restyled with `className` and the site tokens. Use the custom breakpoints `tablet:` / `laptop:` / `desktop:` only.
 - Add shadcn components with `npx shadcn@latest add <name>`; never hand-write them.
 - Never edit `src/routeTree.gen.ts`.
 - Don't commit or push unless asked.

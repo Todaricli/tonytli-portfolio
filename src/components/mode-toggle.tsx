@@ -24,26 +24,26 @@ export function ModeToggle({ className }: { className?: string }) {
 			<DropdownMenuTrigger
 				aria-label="Toggle theme"
 				className={cn(
-					'relative flex size-8 items-center justify-center text-neutral-900 transition-transform duration-1000 hover:rotate-45 dark:text-white',
+					'relative flex size-8 items-center justify-center border border-line transition-colors duration-300 hover:border-brand hover:text-brand',
 					className
 				)}
 			>
-				<Sun className="size-6 scale-100 rotate-0 transition-transform duration-500 dark:scale-0 dark:-rotate-90" />
-				<Moon className="absolute size-6 scale-0 rotate-90 transition-transform duration-500 dark:scale-100 dark:rotate-0" />
+				<Sun className="size-4 scale-100 transition-transform duration-300 dark:scale-0" />
+				<Moon className="absolute size-4 scale-0 transition-transform duration-300 dark:scale-100" />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent
 				align="start"
-				sideOffset={12}
-				className="w-40 animate-dropdown-items rounded-2xl p-2 font-titillium text-neutral-900 shadow-none ring-0 backdrop-blur-sm dark:text-white"
+				sideOffset={14}
+				className="w-40 border border-line p-2 shadow-none ring-0"
 			>
 				{options.map((option) => (
 					<DropdownMenuItem
 						key={option.value}
 						onSelect={() => setTheme(option.value)}
-						className="cursor-pointer justify-between text-lg transition-[transform,color] duration-1000 hover:translate-x-2 focus:bg-transparent focus:text-stone-500 dark:focus:text-stone-400"
+						className="cursor-pointer justify-between py-2 font-grotesk text-sm tracking-[0.06em] uppercase focus:bg-muted focus:text-brand"
 					>
 						{option.label}
-						{theme === option.value && <Check className="size-4" aria-hidden />}
+						{theme === option.value && <Check className="size-4 text-brand" aria-hidden />}
 					</DropdownMenuItem>
 				))}
 			</DropdownMenuContent>
