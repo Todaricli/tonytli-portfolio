@@ -1,4 +1,4 @@
-/** Site-wide constants shared by the header, hero, footer, about and contact sections. */
+/** Site-wide constants shared by the header, hero, footer, about, skills and contact sections. */
 export const site = {
 	name: 'TONY TUOCHENG LI',
 	wordmark: 'TONY T. LI',
@@ -17,12 +17,13 @@ export const navLinks = [
 	{ hash: 'work', label: 'Work' },
 	{ hash: 'experience', label: 'Experience' },
 	{ hash: 'about', label: 'About' },
+	{ hash: 'skills', label: 'Skills' },
 	{ hash: 'contact', label: 'Contact' }
 ] as const;
 
 export type SectionHash = (typeof navLinks)[number]['hash'];
 
-/** Numbered skillset list in the about section. */
+/** Numbered skillset grid in the skills section. */
 export const skills = [
 	{
 		title: 'Frontend',

@@ -29,13 +29,16 @@ export function SiteHeader() {
 					</Link>
 				</div>
 
-				<nav aria-label="Main" className="hidden items-center gap-8 tablet:flex">
+				<nav aria-label="Main" className="hidden items-center gap-6 tablet:flex laptop:gap-8">
 					{navLinks.map((link) => (
 						<Link key={link.hash} to="/" hash={link.hash} className={navLinkClass}>
 							{link.label}
 						</Link>
 					))}
-					<a href={`mailto:${site.email}`} className="type-label text-brand hover:underline">
+					<a
+						href={`mailto:${site.email}`}
+						className="hidden type-label text-brand hover:underline laptop:inline"
+					>
 						{site.email}
 					</a>
 				</nav>

@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as ExperiencesIndexRouteImport } from './routes/experiences/index'
 import { Route as ExperiencesSlugRouteImport } from './routes/experiences/$slug'
 
@@ -36,6 +37,11 @@ const ProjectsRoute = ProjectsRouteImport.update({
   path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SkillsRoute = SkillsRouteImport.update({
+  id: '/skills',
+  path: '/skills',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ExperiencesIndexRoute = ExperiencesIndexRouteImport.update({
   id: '/experiences/',
   path: '/experiences/',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/projects': typeof ProjectsRoute
+  '/skills': typeof SkillsRoute
   '/experiences/$slug': typeof ExperiencesSlugRoute
   '/experiences/': typeof ExperiencesIndexRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/projects': typeof ProjectsRoute
+  '/skills': typeof SkillsRoute
   '/experiences/$slug': typeof ExperiencesSlugRoute
   '/experiences': typeof ExperiencesIndexRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/projects': typeof ProjectsRoute
+  '/skills': typeof SkillsRoute
   '/experiences/$slug': typeof ExperiencesSlugRoute
   '/experiences/': typeof ExperiencesIndexRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/projects'
+    | '/skills'
     | '/experiences/$slug'
     | '/experiences/'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/projects'
+    | '/skills'
     | '/experiences/$slug'
     | '/experiences'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/projects'
+    | '/skills'
     | '/experiences/$slug'
     | '/experiences/'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   ProjectsRoute: typeof ProjectsRoute
+  SkillsRoute: typeof SkillsRoute
   ExperiencesSlugRoute: typeof ExperiencesSlugRoute
   ExperiencesIndexRoute: typeof ExperiencesIndexRoute
 }
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/skills': {
+      id: '/skills'
+      path: '/skills'
+      fullPath: '/skills'
+      preLoaderRoute: typeof SkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/experiences/': {
       id: '/experiences/'
       path: '/experiences'
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   ProjectsRoute: ProjectsRoute,
+  SkillsRoute: SkillsRoute,
   ExperiencesSlugRoute: ExperiencesSlugRoute,
   ExperiencesIndexRoute: ExperiencesIndexRoute,
 }

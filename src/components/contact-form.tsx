@@ -30,7 +30,7 @@ export function ContactForm() {
 			data-reveal
 			className="mx-auto max-w-[1600px] scroll-mt-16 px-4 py-20 tablet:px-8 laptop:px-12 laptop:py-32"
 		>
-			<SectionHeading index="04" label="Contact" className="pb-12 laptop:pb-20">
+			<SectionHeading index="05" label="Contact" className="pb-12 laptop:pb-20">
 				Let's <span className="text-brand">build</span> something.
 			</SectionHeading>
 

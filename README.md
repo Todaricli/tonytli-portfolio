@@ -54,9 +54,9 @@ src/
   index.css             Tailwind setup, light/dark theme, fonts and animations
   routes/               TanStack Router file-based routing
     __root.tsx          Shared layout: sticky header, footer, 404
-    index.tsx           The single home page (hero, work, experience, about, contact)
+    index.tsx           The single home page (hero, work, experience, about, skills, contact)
     experiences/$slug   Detail page for one role
-    projects.tsx, about.tsx, contact.tsx, experiences/index.tsx
+    projects.tsx, about.tsx, skills.tsx, contact.tsx, experiences/index.tsx
                         Old page URLs; they redirect to the matching home section
   components/           Site components (header, footer, about, contact form…)
   components/sections/  Home page sections (hero, tech marquee, work, experience)

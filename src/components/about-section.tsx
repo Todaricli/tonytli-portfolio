@@ -1,8 +1,8 @@
 import { SectionHeading } from '@/components/section-heading';
-import { site, skills } from '@/data/site';
+import { site } from '@/data/site';
 import { useReveal } from '@/hooks/use-reveal';
 
-/** #about: inverted "night" block with photo, summary and the numbered skillset. */
+/** #about: inverted "night" block with photo and summary. */
 export function AboutSection() {
 	const ref = useReveal<HTMLDivElement>();
 
@@ -55,22 +55,6 @@ export function AboutSection() {
 						</p>
 					</div>
 				</div>
-
-				<h3 className="pt-20 pb-8 type-label text-muted-foreground laptop:pt-32">Skillset</h3>
-				<ol className="grid border-t border-line tablet:grid-cols-2 laptop:grid-cols-4">
-					{skills.map((skill, index) => (
-						<li
-							key={skill.title}
-							className="flex flex-col gap-4 border-b border-line py-8 tablet:pr-8 laptop:border-b-0"
-						>
-							<span className="type-label text-brand">{String(index + 1).padStart(2, '0')}</span>
-							<span className="font-display text-2xl font-medium tracking-tight">
-								{skill.title}
-							</span>
-							<p className="type-body text-muted-foreground">{skill.desc}</p>
-						</li>
-					))}
-				</ol>
 			</div>
 		</section>
 	);
