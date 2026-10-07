@@ -1,0 +1,13 @@
+{
+	"tailwindCSS.experimental.configFile": "src/index.css",
+	"tailwindCSS.classFunctions": ["cn", "cva"],
+	"tailwindCSS.experimental.classRegex": [
+		["(?:const|let)\\s+\\w*(?:Class|Heading|Link)\\s*=\\s*'([^']*)'", "([^']*)"]
+	],
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"editor.quickSuggestions": {
+		"strings": "on"
+	}
+}

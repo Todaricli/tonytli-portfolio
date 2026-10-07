@@ -1,4 +1,9 @@
-# Ignore files for PNPM, NPM and YARN
-pnpm-lock.yaml
+# Package managers
 package-lock.json
+pnpm-lock.yaml
 yarn.lock
+
+# Build output / generated
+dist
+src/routeTree.gen.ts
+public

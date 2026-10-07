@@ -1,0 +1,226 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------ */
+/* Design tokens: breakpoints, fonts, animations                       */
+/* Fonts are bundled from @fontsource-variable (imported in main.tsx)  */
+/* ------------------------------------------------------------------ */
+@theme {
+	/* Custom breakpoints REPLACE Tailwind's defaults: there is no sm/md/lg/xl */
+	--breakpoint-*: initial;
+	--breakpoint-tablet: 740px;
+	--breakpoint-laptop: 1124px;
+	--breakpoint-desktop: 1560px;
+
+	--font-sans: 'Archivo Variable', 'Helvetica Neue', Arial, sans-serif;
+	--font-display:
+		'Funnel Display Variable', 'Archivo Variable', 'Helvetica Neue', Arial, sans-serif;
+	--font-grotesk: 'Space Grotesk Variable', 'Helvetica Neue', Arial, sans-serif;
+
+	--animate-marquee: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+/* ------------------------------------------------------------------ */
+/* Fluid type scale. Named type-* rather than text-* so tailwind-merge */
+/* never mistakes them for colours                                     */
+/* ------------------------------------------------------------------ */
+@utility type-display {
+	font-family: var(--font-display);
+	font-size: clamp(2.25rem, 6.944vw, 6.25rem);
+	line-height: 0.88;
+	letter-spacing: -0.03em;
+}
+@utility type-section {
+	font-family: var(--font-display);
+	font-size: clamp(2rem, 7.222vw, 6.5rem);
+	line-height: 1;
+	letter-spacing: -0.02em;
+}
+@utility type-project {
+	font-family: var(--font-display);
+	font-size: clamp(1.625rem, 4.167vw, 3.75rem);
+	line-height: 1.05;
+	letter-spacing: -0.015em;
+}
+@utility type-body-lg {
+	font-size: clamp(1.0625rem, 1.25vw, 1.125rem);
+	line-height: 1.5;
+	letter-spacing: -0.01em;
+}
+@utility type-body {
+	font-size: clamp(0.9375rem, 1.111vw, 1rem);
+	line-height: 1.55;
+	letter-spacing: -0.01em;
+}
+@utility type-label {
+	font-family: var(--font-grotesk);
+	font-size: clamp(0.6875rem, 0.833vw, 0.75rem);
+	line-height: 1.4;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------------ */
+/* Colour tokens. Site palette: canvas / ink / line / brand (blue);    */
+/* muted text uses shadcn's muted-foreground. shadcn vars map onto it. */
+/* Light = :root, dark = .dark (set before paint by index.html).       */
+/* ------------------------------------------------------------------ */
+@theme inline {
+	--color-canvas: var(--canvas);
+	--color-ink: var(--ink);
+	--color-muted: var(--muted);
+	--color-line: var(--line);
+	--color-brand: var(--brand);
+
+	--color-ring: var(--ring);
+	--color-input: var(--input);
+	--color-border: var(--border);
+	--color-destructive: var(--destructive);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-secondary: var(--secondary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-primary: var(--primary);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-popover: var(--popover);
+	--color-card-foreground: var(--card-foreground);
+	--color-card: var(--card);
+	--color-foreground: var(--foreground);
+	--color-background: var(--background);
+	--radius-sm: calc(var(--radius) * 0.6);
+	--radius-md: calc(var(--radius) * 0.8);
+	--radius-lg: var(--radius);
+}
+
+:root {
+	--canvas: #efeeeb;
+	--ink: #0a0a0a;
+	--line: rgb(10 10 10 / 15%);
+	--brand: #2447f5;
+
+	/* shadcn mapping */
+	--background: var(--canvas);
+	--foreground: var(--ink);
+	--card: var(--canvas);
+	--card-foreground: var(--ink);
+	--popover: var(--canvas);
+	--popover-foreground: var(--ink);
+	--primary: var(--brand);
+	--primary-foreground: var(--canvas);
+	--secondary: rgb(10 10 10 / 6%);
+	--secondary-foreground: var(--ink);
+	--muted: var(--secondary);
+	--muted-foreground: #6b6862;
+	/* shadcn's "accent" is the hover/focus surface; the blue is --brand */
+	--accent: var(--secondary);
+	--accent-foreground: var(--ink);
+	--destructive: oklch(0.577 0.245 27.325);
+	--border: var(--line);
+	--input: var(--line);
+	--ring: var(--brand);
+	--radius: 0rem;
+}
+
+.dark {
+	--canvas: #0a0a0a;
+	--ink: #efeeeb;
+	--line: rgb(239 238 235 / 15%);
+	--brand: #6b8cff;
+	--muted-foreground: #8e8b85;
+
+	--secondary: rgb(239 238 235 / 8%);
+	--destructive: oklch(0.704 0.191 22.216);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	html {
+		@apply min-h-screen w-full font-sans;
+		scroll-behavior: smooth;
+	}
+	body {
+		@apply min-h-screen w-full bg-canvas text-ink antialiased;
+		transition:
+			background-color 300ms,
+			color 300ms;
+	}
+	::selection {
+		background: var(--brand);
+		color: var(--canvas);
+	}
+	/* Tailwind v4 dropped the pointer cursor on buttons */
+	button:not(:disabled),
+	[role='button']:not(:disabled),
+	summary {
+		cursor: pointer;
+	}
+}
+
+@layer components {
+	/* Inverted block (about/skillset): re-points the palette so children keep using the same tokens */
+	.surface-night {
+		--canvas: #0a0a0a;
+		--ink: #efeeeb;
+		--muted-foreground: #8e8b85;
+		--line: rgb(239 238 235 / 15%);
+		--brand: #6b8cff;
+		--secondary: rgb(239 238 235 / 8%);
+		background-color: var(--canvas);
+		color: var(--ink);
+	}
+	.dark .surface-night {
+		--canvas: #141414;
+	}
+
+	/* One-time fade-up on scroll into view (hooks/use-reveal.ts sets data-revealed) */
+	[data-reveal] {
+		transition:
+			opacity 700ms ease-out,
+			transform 700ms ease-out;
+	}
+	[data-reveal]:not([data-revealed]) {
+		opacity: 0;
+		transform: translateY(16px);
+	}
+
+	/* Rich-text descriptions rendered from src/data (HTML strings) */
+	.rich-text ul {
+		list-style: disc;
+		padding-left: 1.25rem;
+	}
+	.rich-text br {
+		display: block;
+		content: '';
+		margin-top: 0.75rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	[data-reveal] {
+		transition: none;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+	.animate-marquee {
+		animation: none;
+	}
+}
