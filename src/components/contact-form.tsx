@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+import type { FormEvent } from 'react';
+
 import { SectionHeading } from '@/components/section-heading';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -19,9 +22,24 @@ const otherContacts = [
 	{ href: site.linkedin, label: 'LinkedIn ↗' }
 ];
 
-/** #contact: plain HTML form POST to getform.io (no JS submit handling). */
+// Humans need a few seconds to fill the form; scripted posts usually don't wait.
+const MIN_FILL_MS = 3000;
+
+/** #contact: native HTML form POST to getform.io, guarded by a honeypot + time trap. */
 export function ContactForm() {
 	const ref = useReveal<HTMLElement>();
+	const mountedAt = useRef(0);
+
+	useEffect(() => {
+		mountedAt.current = Date.now();
+	}, []);
+
+	// Silently drop likely-bot submissions; real ones fall through to the native POST.
+	function handleSubmit(event: FormEvent<HTMLFormElement>) {
+		const honeypot = new FormData(event.currentTarget).get('_gotcha');
+		const tooFast = Date.now() - mountedAt.current < MIN_FILL_MS;
+		if (honeypot || tooFast) event.preventDefault();
+	}
 
 	return (
 		<section
@@ -35,7 +53,12 @@ export function ContactForm() {
 			</SectionHeading>
 
 			<div className="grid gap-16 laptop:grid-cols-[1fr_minmax(0,0.6fr)]">
-				<form action={site.contactFormAction} method="POST" className="flex flex-col gap-10">
+				<form
+					action={site.contactFormAction}
+					method="POST"
+					onSubmit={handleSubmit}
+					className="flex flex-col gap-10"
+				>
 					<div className="grid gap-10 tablet:grid-cols-2">
 						<div className="flex flex-col gap-2">
 							<Label htmlFor="name" className={labelClass}>
@@ -77,8 +100,12 @@ export function ContactForm() {
 							className={`${fieldClass} min-h-40 resize-y`}
 						/>
 					</div>
-					{/* Honeypot field to deter spam bots */}
-					<input type="hidden" name="_gotcha" style={{ display: 'none' }} />
+					{/* Honeypot: a real text field moved off-screen (not type=hidden / display:none,
+					    which bots skip). Humans never fill it; getform rejects posts where _gotcha is set. */}
+					<div aria-hidden="true" className="absolute -left-[10000px] h-px w-px overflow-hidden">
+						<label htmlFor="website">Website</label>
+						<input id="website" type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
+					</div>
 
 					<Button
 						type="submit"
